@@ -18,11 +18,11 @@ export default {
             ).join('\n├\n');
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             return client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇᴄʜ Nᴇᴡs ≪━━━\n├\n${headlines}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇᴄʜ Nᴇᴡs ≪━━━\n├\n${headlines}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         } catch {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-            return client.sendMessage(m.chat, { text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇᴄʜ Nᴇᴡs ≪━━━\n├\n├ Tech world went offline. How ironic.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆' }, { quoted: fq });
+            return client.sendMessage(m.chat, { text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇᴄʜ Nᴇᴡs ≪━━━\n├\n├ Tech world went offline. How ironic.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟' }, { quoted: fq });
         }
     }
 };

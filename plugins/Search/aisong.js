@@ -18,7 +18,7 @@ export default {
 
         if (!prompt) {
             return client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀoʀ ≪━━━\n├ \n├ Give me something to work with.\n├ Example: ${prefix}aisong a sad love song about rain\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀoʀ ≪━━━\n├ \n├ Give me something to work with.\n├ Example: ${prefix}aisong a sad love song about rain\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         }
 
@@ -39,18 +39,18 @@ export default {
                     fileName: 'song.mp3'
                 }, { quoted: fq });
                 await client.sendMessage(m.chat, {
-                    text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ AI Sᴏɴɢ ≪━━━\n├ \n├ Prompt: ${prompt}\n├ Generated successfully.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                    text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ AI Sᴏɴɢ ≪━━━\n├ \n├ Prompt: ${prompt}\n├ Generated successfully.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
                 }, { quoted: fq });
             } else {
                 const display = typeof result === 'string' ? result : JSON.stringify(result);
                 await client.sendMessage(m.chat, {
-                    text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ AI Sᴏɴɢ ≪━━━\n├ \n├ Prompt: ${prompt}\n├ \n├ ${display}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                    text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ AI Sᴏɴɢ ≪━━━\n├ \n├ Prompt: ${prompt}\n├ \n├ ${display}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
                 }, { quoted: fq });
             }
         } catch {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
             await client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Fᴀɪʟᴇᴅ ≪━━━\n├ \n├ Song generation failed. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Fᴀɪʟᴇᴅ ≪━━━\n├ \n├ Song generation failed. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         }
     }

@@ -1,5 +1,5 @@
 import { getFakeQuoted } from '../../lib/fakeQuoted.js';
-  import googleTTS from 'google-tts-api';
+import googleTTS from 'google-tts-api';
 export default async (context) => {
 
   const { client, m, text } = context;
@@ -9,7 +9,7 @@ export default async (context) => {
 
   if (!text) {
       await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-      return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TTS ≪━━━\n├ \n├ Where is the text for conversion?\n├ Can\'t you read instructions?\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+      return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TTS ≪━━━\n├ \n├ Where is the text for conversion?\n├ Can\'t you read instructions?\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
   }
 
   await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -25,7 +25,7 @@ export default async (context) => {
     await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
   } catch (e) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-    m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TTS ERROR ≪━━━\n├ \n├ TTS failed. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+    m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TTS ERROR ≪━━━\n├ \n├ TTS failed. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
   }
 
   }

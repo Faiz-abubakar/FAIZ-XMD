@@ -104,7 +104,7 @@ export default {
         {
           interactiveMessage: {
             body: { text: styledText },
-            footer: { text: '©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆' },
+            footer: { text: '©𝖋𝖆𝖎𝖟' },
             nativeFlowMessage: {
               messageVersion: 1,
               buttons: [{

@@ -20,20 +20,20 @@ export default async (context) => {
 
   if (text) {
     await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
-    return client.sendMessage(m.chat, { text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Yo, @${m.sender.split('@')[0].split(':')[0]}, what's with the extra\n├ bullshit? Just say ${prefix}credits, you moron.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆` }, { quoted: fq, mentions: [m.sender] });
+    return client.sendMessage(m.chat, { text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Yo, @${m.sender.split('@')[0].split(':')[0]}, what's with the extra\n├ bullshit? Just say ${prefix}credits, you moron.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟` }, { quoted: fq, mentions: [m.sender] });
   }
 
   try {
-    const replyText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Cʀᴇᴅɪᴛs ≪━━━\n├ \n├ All hail *Fredi*, the badass who\n├ built this bot from the ground up.\n├ Nobody else gets credit—fuck 'em.\n├ This is my empire, and I run this\n├ shit solo.\n├ \n├ Bow down to *Fredi*\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+    const replyText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Cʀᴇᴅɪᴛs ≪━━━\n├ \n├ All hail *Fredi*, the badass who\n├ built this bot from the ground up.\n├ Nobody else gets credit—fuck 'em.\n├ This is my empire, and I run this\n├ shit solo.\n├ \n├ Bow down to *Fredi*\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
     await client.sendMessage(m.chat, {
       text: replyText,
-      footer: `©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`,
+      footer: `©𝖋𝖆𝖎𝖟`,
       viewOnce: true
     }, { quoted: fq });
   } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
     console.error('Error in credits command:', error);
-    await client.sendMessage(m.chat, { text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Shit went sideways, can't show credits.\n├ Try again later, loser.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆` }, { quoted: fq });
+    await client.sendMessage(m.chat, { text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Shit went sideways, can't show credits.\n├ Try again later, loser.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟` }, { quoted: fq });
   }
 };

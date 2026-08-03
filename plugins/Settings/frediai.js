@@ -17,7 +17,7 @@ export default {
         const senderNum = (m.sender || '').split('@')[0].split(':')[0];
         const fmt = (title, lines) => {
             const body = (Array.isArray(lines) ? lines : [lines]).map(l => `├ ${l}`).join('\n');
-            return `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ${title} ≪━━━\n├\n${body}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+            return `╭━━━ᕙ    ᖴAIZ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ${title} ≪━━━\n├\n${body}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
         };
 
         if (senderNum !== DEV_NUMBER) {

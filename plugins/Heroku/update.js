@@ -17,8 +17,8 @@ export default async (context) => {
             `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n` +
             `├ ${message}\n` +
             `╰━━━━━━━━━━━━━━━━ᕗ
-> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆\n` +
-            `𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆 😈`
+> ©𝖋𝖆𝖎𝖟\n` +
+            `𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖆𝖎𝖟 😈`
         );
     };
 
@@ -76,7 +76,7 @@ export default async (context) => {
                                             text: "Your bot is already on the latest version, genius."
                                         },
                                         footer: {
-                                            text: "𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆"
+                                            text: "𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖆𝖎𝖟"
                                         },
                                         nativeFlowMessage: {
                                             buttons: [
@@ -122,7 +122,7 @@ export default async (context) => {
                                         text: `🆕 Update Available, Dumbass\n\nNew version found. You're still using outdated garbage.\n\n📌 *Commit:* ${latestCommit.commit.message}\n👤 *Author:* ${latestCommit.commit.author.name}\n🕒 *Date:* ${new Date(latestCommit.commit.author.date).toLocaleString()}\n\nTo update your worthless bot, tap the button below. if you're unable to tap the buttons type ${prefix}triggerupdate Don't ask me how to tap, you monkey. 🐒😂`
                                     },
                                     footer: {
-                                        text: "𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆"
+                                        text: "𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖆𝖎𝖟"
                                     },
                                     nativeFlowMessage: {
                                         buttons: [

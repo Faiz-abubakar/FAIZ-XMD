@@ -12,7 +12,7 @@ export default {
         const city = (text || '').trim();
         if (!city) {
             return client.sendMessage(m.chat, {
-                text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Wᴇᴀᴛʜᴇʀ ≪━━━\n├\n├ Give me a city name, genius.\n├ Usage: .weather Nairobi\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆'
+                text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Wᴇᴀᴛʜᴇʀ ≪━━━\n├\n├ Give me a city name, genius.\n├ Usage: .weather Nairobi\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟'
             }, { quoted: fq });
         }
         try {
@@ -31,11 +31,11 @@ export default {
             const visibility = w.visibility || '?';
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             return client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Wᴇᴀᴛʜᴇʀ ≪━━━\n├\n├ 📍 ${areaName}, ${country}\n├ ☁️ ${desc}\n├ 🌡️ Temp: ${tempC}°C (Feels ${feelsC}°C)\n├ 💧 Humidity: ${humidity}%\n├ 💨 Wind: ${wind} km/h\n├ 👁️ Visibility: ${visibility} km\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Wᴇᴀᴛʜᴇʀ ≪━━━\n├\n├ 📍 ${areaName}, ${country}\n├ ☁️ ${desc}\n├ 🌡️ Temp: ${tempC}°C (Feels ${feelsC}°C)\n├ 💧 Humidity: ${humidity}%\n├ 💨 Wind: ${wind} km/h\n├ 👁️ Visibility: ${visibility} km\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         } catch (e) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-            return client.sendMessage(m.chat, { text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Wᴇᴀᴛʜᴇʀ ≪━━━\n├\n├ Weather API is throwing a tantrum. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆' }, { quoted: fq });
+            return client.sendMessage(m.chat, { text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Wᴇᴀᴛʜᴇʀ ≪━━━\n├\n├ Weather API is throwing a tantrum. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟' }, { quoted: fq });
         }
     }
 };

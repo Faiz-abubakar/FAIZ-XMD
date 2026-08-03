@@ -1,5 +1,5 @@
 import { getFakeQuoted } from '../../lib/fakeQuoted.js';
-    import { node } from 'compile-run';
+import { node } from 'compile-run';
 export default async (context) => {
     const { m, text } = context;
     const fq = getFakeQuoted(m);
@@ -13,7 +13,7 @@ export default async (context) => {
 
     if (!code) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-        return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ JS COMPILER ≪━━━\n├ \n├ Provide JavaScript code or quote one.\n├ Example: .runjs console.log("hello")\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+        return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ JS COMPILER ≪━━━\n├ \n├ Provide JavaScript code or quote one.\n├ Example: .runjs console.log("hello")\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
     }
 
     try {
@@ -23,11 +23,11 @@ export default async (context) => {
         let output = result.stdout || 'No output';
         let error = result.stderr ? `├ stderr: ${result.stderr}\n` : '';
         
-        m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ JS OUTPUT ≪━━━\n├ \n├ ${output}\n${error}╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ JS OUTPUT ≪━━━\n├ \n├ ${output}\n${error}╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
         
     } catch (err) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
         console.log(err);
-        m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ JS ERROR ≪━━━\n├ \n├ ${err.stderr || err.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ JS ERROR ≪━━━\n├ \n├ ${err.stderr || err.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
     }
 };

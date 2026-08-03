@@ -29,13 +29,13 @@ export default async (context) => {
         })
       })
       await Promise.all(promises)
-      jackhuh += `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+      jackhuh += `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
       await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
       m.reply(jackhuh);
 
   } catch (e) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-    m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ERROR ≪━━━\n├ \n├ Error occured while accessing\n├ bot groups.\n├ ${e}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`)
+    m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ERROR ≪━━━\n├ \n├ Error occured while accessing\n├ bot groups.\n├ ${e}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`)
   }
 
   });

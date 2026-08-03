@@ -21,7 +21,7 @@ export default {
 
         if (!input) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-            return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Bᴀsᴇ64 Dᴇᴄᴏᴅᴇ ≪━━━\n├ \n├ You gave me nothing. Classic.\n├ Usage: .unbase64 SGVsbG8gV29ybGQ=\n├        .debase64 [reply to base64]\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+            return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Bᴀsᴇ64 Dᴇᴄᴏᴅᴇ ≪━━━\n├ \n├ You gave me nothing. Classic.\n├ Usage: .unbase64 SGVsbG8gV29ybGQ=\n├        .debase64 [reply to base64]\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
         }
 
         let decoded = '';
@@ -31,12 +31,12 @@ export default {
             if (!decoded || !decoded.trim()) throw new Error('empty result');
         } catch {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-            return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Bᴀsᴇ64 Dᴇᴄᴏᴅᴇ ≪━━━\n├ \n├ That\'s not valid Base64.\n├ Learn what Base64 is first.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+            return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Bᴀsᴇ64 Dᴇᴄᴏᴅᴇ ≪━━━\n├ \n├ That\'s not valid Base64.\n├ Learn what Base64 is first.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
         }
 
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
 
-        const resultText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Bᴀsᴇ64 Dᴇᴄᴏᴅᴇ ≪━━━\n├ \n├ 📥 Input (Base64):\n├ ${input.slice(0, 60)}${input.length > 60 ? '...' : ''}\n├ \n├ 📤 Decoded:\n├ \n${decoded}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+        const resultText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Bᴀsᴇ64 Dᴇᴄᴏᴅᴇ ≪━━━\n├ \n├ 📥 Input (Base64):\n├ ${input.slice(0, 60)}${input.length > 60 ? '...' : ''}\n├ \n├ 📤 Decoded:\n├ \n${decoded}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
         try {
             const msg = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({

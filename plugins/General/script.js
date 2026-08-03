@@ -31,7 +31,7 @@ export default {
       const createdDate = new Date(repoInfo.createdAt).toLocaleDateString('en-GB');
       const lastUpdateDate = new Date(repoInfo.lastUpdate).toLocaleDateString('en-GB');
 
-      const replyText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Repository ≪━━━\n├ \n├ Link:\n├ https://github.com/Fred1e/Fee-XMD\n├ \n├ Stars : ${repoInfo.stars}\n├ Forks : ${repoInfo.forks}\n├ Created : ${createdDate}\n├ Last Update : ${lastUpdateDate}\n├ Owner : ${repoInfo.owner}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+      const replyText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Repository ≪━━━\n├ \n├ Link:\n├ https://github.com/Fred1e/Fee-XMD\n├ \n├ Stars : ${repoInfo.stars}\n├ Forks : ${repoInfo.forks}\n├ Created : ${createdDate}\n├ Last Update : ${lastUpdateDate}\n├ Owner : ${repoInfo.owner}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
       await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
 
@@ -87,7 +87,7 @@ export default {
       await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
       console.error('Error in repo command:', error);
       await client.sendMessage(m.chat, {
-        text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Couldn't fetch repo data\n├ ${error.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+        text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Couldn't fetch repo data\n├ ${error.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
       }, { quoted: fq });
     }
   }

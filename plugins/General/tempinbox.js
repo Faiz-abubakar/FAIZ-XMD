@@ -15,7 +15,7 @@ export default {
 
         if (!sessionId) {
             return client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇᴍᴘ Iɴʙᴏx ≪━━━\n├ \n├ Yo, where's the session ID?\n├ You created the temp mail, right?\n├ Usage: ${prefix}tempinbox YOUR_SESSION_ID\n├ Example: ${prefix}tempinbox U2Vzc2lvbjoc5LI1OhFHh4tv21skV965\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇᴍᴘ Iɴʙᴏx ≪━━━\n├ \n├ Yo, where's the session ID?\n├ You created the temp mail, right?\n├ Usage: ${prefix}tempinbox YOUR_SESSION_ID\n├ Example: ${prefix}tempinbox U2Vzc2lvbjoc5LI1OhFHh4tv21skV965\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         }
 
@@ -36,7 +36,7 @@ export default {
 
             if (totalEmails === 0) {
                 return client.sendMessage(m.chat, {
-                    text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇᴍᴘ Iɴʙᴏx ≪━━━\n├ \n├ Inbox is empty, genius.\n├ No emails yet.\n├ Use your temp email somewhere\n├ and check back.\n├ Total Emails: 0\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                    text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇᴍᴘ Iɴʙᴏx ≪━━━\n├ \n├ Inbox is empty, genius.\n├ No emails yet.\n├ Use your temp email somewhere\n├ and check back.\n├ Total Emails: 0\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
                 }, { quoted: fq });
             }
 
@@ -55,7 +55,7 @@ export default {
                 }
             });
 
-            inboxText += `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+            inboxText += `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
             if (inboxText.length > 4000) {
                 const firstPart = inboxText.substring(0, 4000);
@@ -83,7 +83,7 @@ export default {
             }
 
             await client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ ${errorMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ ${errorMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         }
     },

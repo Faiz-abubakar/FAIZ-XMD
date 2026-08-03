@@ -1,7 +1,7 @@
 import { generateWAMessageFromContent, proto } from '@whiskeysockets/baileys';
-  import { getFakeQuoted } from '../../lib/fakeQuoted.js';
+import { getFakeQuoted } from '../../lib/fakeQuoted.js';
 
-  export default {
+export default {
       name: 'password',
       aliases: ['genpass', 'passgen', 'strongpass'],
       description: 'Generate a strong random password',
@@ -13,7 +13,7 @@ import { generateWAMessageFromContent, proto } from '@whiskeysockets/baileys';
           const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
           let pass = '';
           for (let i = 0; i < len; i++) pass += chars[Math.floor(Math.random() * chars.length)];
-          const resultText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Pᴀssᴡᴏʀᴅ Gᴇɴ ≪━━━\n├\n├ 🔐 Length: ${len} chars\n├\n├ ${pass}\n├\n├ Save it. I won't regenerate it for you.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+          const resultText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Pᴀssᴡᴏʀᴅ Gᴇɴ ≪━━━\n├\n├ 🔐 Length: ${len} chars\n├\n├ ${pass}\n├\n├ Save it. I won't regenerate it for you.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
           try {
               const msg = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                   interactiveMessage: {

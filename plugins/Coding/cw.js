@@ -8,7 +8,7 @@ export default async (context) => {
 
     if (!text) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-        return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Wᴇʙ2Zɪᴩ ≪━━━\n├ \n├ Downloads entire websites as ZIP files\n├ Example: ${prefix}web2zip https://example.com\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        return m.reply(`╭━━━ᕙ    ᖴAIZ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Wᴇʙ2Zɪᴩ ≪━━━\n├ \n├ Downloads entire websites as ZIP files\n├ Example: ${prefix}web2zip https://example.com\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©�𝖎𝖟`);
     }
 
     try {
@@ -41,7 +41,7 @@ export default async (context) => {
 
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
 
-        const caption = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Wᴇʙsɪᴛᴇ Zɪᴩ ≪━━━\n├ \n├ *URL:* ${result.url}\n├ *Files Copied:* ${result.copiedFilesAmount}\n├ *Download Link:*\n├ ${result.downloadUrl}\n├\n├ Click the link above to download the ZIP\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+        const caption = `╭━━━ᕙ    ᖴAIZ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Wᴇʙsɪᴛᴇ Zɪᴩ ≪━━━\n├ \n├ *URL:* ${result.url}\n├ *Files Copied:* ${result.copiedFilesAmount}\n├ *Download Link:*\n├ ${result.downloadUrl}\n├\n├ Click the link above to download the ZIP\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©�𝖎𝖟`;
 
         await client.sendMessage(m.chat, { text: caption }, { quoted: fq });
 
@@ -64,6 +64,6 @@ export default async (context) => {
             errorMessage = "Can't reach the website. Is it even real?";
         }
 
-        await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Fᴀɪʟᴇᴅ ≪━━━\n├ \n├ ${errorMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        await m.reply(`╭━━━ᕙ    ᖴAIZ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Fᴀɪʟᴇᴅ ≪━━━\n├ \n├ ${errorMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©�𝖎𝖟`);
     }
 };

@@ -1,5 +1,5 @@
 import { downloadContentFromMessage } from '@whiskeysockets/baileys';
-  import { getFakeQuoted } from '../../lib/fakeQuoted.js';
+import { getFakeQuoted } from '../../lib/fakeQuoted.js';
 
   async function _dlMedia(client, m) {
       const mtype = m.quoted.mtype || '';
@@ -24,7 +24,7 @@ import { downloadContentFromMessage } from '@whiskeysockets/baileys';
       }
   }
 
-  export default {
+export default {
       name: 'save',
       aliases: ['sv'],
       run: async (context) => {
@@ -40,7 +40,7 @@ import { downloadContentFromMessage } from '@whiskeysockets/baileys';
                       `├ \n` +
                       `├ Reply to something first, genius.\n` +
                       `╰━━━━━━━━━━━━━━━━ᕗ\n` +
-                      `> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                      `> ©𝖋𝖆𝖎𝖟`
               }, { quoted: fq });
           }
 

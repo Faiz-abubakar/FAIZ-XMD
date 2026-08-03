@@ -1,6 +1,6 @@
 import { getFakeQuoted } from '../../lib/fakeQuoted.js';
 
-  export default {
+export default {
       name: 'profile',
       aliases: ['getpp', 'pp', 'pfp'],
       description: 'Get profile picture. In a group with no args, sends the group pic and description.',
@@ -19,7 +19,7 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
                   const desc = (meta.desc && meta.desc.toString().trim()) || 'No description set.';
                   await client.sendMessage(m.chat, {
                       image: { url: ppUrl },
-                      caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≡ Gʀᴏᴜᴘ Pɪᴄ ≢───\n├ \n├ *${meta.subject}*\n├ \n├ ${desc}\n╰━━━━━━━━━━━━━━━━ᕗ☑\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                      caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≡ Gʀᴏᴜᴘ Pɪᴄ ≢───\n├ \n├ *${meta.subject}*\n├ \n├ ${desc}\n╰━━━━━━━━━━━━━━━━ᕗ☑\n> ©𝖋𝖆𝖎𝖟`
                   }, { quoted: fq });
                   await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
                   return;
@@ -58,7 +58,7 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
 
               await client.sendMessage(m.chat, {
                   image: { url: ppUrl },
-                  caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≡ Pʀᴏғɪʟᴇ ≢───\n├ \n├ ${displayName}\n╰━━━━━━━━━━━━━━━━ᕗ☑\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`,
+                  caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≡ Pʀᴏғɪʟᴇ ≢───\n├ \n├ ${displayName}\n╰━━━━━━━━━━━━━━━━ᕗ☑\n> ©𝖋𝖆𝖎𝖟`,
                   mentions: targetUser !== m.sender ? [targetUser] : []
               }, { quoted: fq });
               await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
@@ -66,7 +66,7 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
           } catch (error) {
               await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
               console.error('Profile error:', error);
-              await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≡ Eʀʀᴏʀ ≢───\n├ \n├ Failed to fetch profile.\n├ The user probably blocked you or\n├ their privacy settings are stricter\n├ than your intelligence.\n╰━━━━━━━━━━━━━━━━ᕗ☑\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+              await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≡ Eʀʀᴏʀ ≢───\n├ \n├ Failed to fetch profile.\n├ The user probably blocked you or\n├ their privacy settings are stricter\n├ than your intelligence.\n╰━━━━━━━━━━━━━━━━ᕗ☑\n> ©𝖋𝖆𝖎𝖟`);
           }
       }
   };

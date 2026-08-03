@@ -1,10 +1,10 @@
 import axios from 'axios';
-  import { getFakeQuoted } from '../../lib/fakeQuoted.js';
+import { getFakeQuoted } from '../../lib/fakeQuoted.js';
 
   const GCSE_KEY = 'AIzaSyDMbI3nvmQUrfjoCJYLS69Lej1hSXQjnWI';
   const GCSE_CX  = 'baf9bdb0c631236e5';
 
-  export default {
+export default {
       name: 'image',
       aliases: ['img', 'pic', 'searchimage'],
       description: 'Search and send images',
@@ -17,7 +17,7 @@ import axios from 'axios';
           if (!query) {
               await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
               return client.sendMessage(m.chat, {
-                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Give me something to search, genius.\n├ Example: ${prefix}img cats\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Give me something to search, genius.\n├ Example: ${prefix}img cats\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
               }, { quoted: fq });
           }
 
@@ -30,7 +30,7 @@ import axios from 'axios';
               if (!data.items || data.items.length === 0) {
                   await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
                   return client.sendMessage(m.chat, {
-                      text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No images found for "${query}".\n├ Your search is terrible.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                      text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No images found for "${query}".\n├ Your search is terrible.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
                   }, { quoted: fq });
               }
 
@@ -41,7 +41,7 @@ import axios from 'axios';
                   try {
                       await client.sendMessage(m.chat, {
                           image: { url: item.link },
-                          caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ IMAGE ${i + 1}/${data.items.length} ≪━━━\n├ \n├ ${(item.title || query).slice(0, 80)}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                          caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ IMAGE ${i + 1}/${data.items.length} ≪━━━\n├ \n├ ${(item.title || query).slice(0, 80)}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
                       }, { quoted: fq });
                       if (i < data.items.length - 1) await new Promise(r => setTimeout(r, 1200));
                   } catch (imgErr) {
@@ -54,7 +54,7 @@ import axios from 'axios';
               console.error('Image search error:', error.message);
               await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
               await client.sendMessage(m.chat, {
-                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Image search failed. Try again later.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Image search failed. Try again later.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
               }, { quoted: fq });
           }
       }

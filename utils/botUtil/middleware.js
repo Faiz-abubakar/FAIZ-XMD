@@ -1,4 +1,4 @@
-const DEV_NUMBER = '255752593977';
+const DEV_NUMBER = '254748253729';
 
 const normalizeNumber = (jid) => {
     if (!jid) return '';
@@ -10,10 +10,10 @@ const middleware = async (context, next) => {
     const isDev = normalizeNumber(m.sender) === normalizeNumber(DEV_NUMBER);
 
     if (!m.isGroup) {
-        return m.reply(`╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├━━━≫ Gʀᴏᴜᴘ Oɴʟʏ ≪━━━\n├ \n├ This command isn't for lone wolves.\n├ Try again in a group, you loner.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©Powered By fredi_ezra`);
+        return m.reply(`╭━━━ᕙ    FAIZ-XMD    ᕗ━━━\n├━━━≫ Gʀᴏᴜᴘ Oɴʟʏ ≪━━━\n├ \n├ This command isn't for lone wolves.\n├ Try again in a group, you loner.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©Powered By fredi_ezra`);
     }
     if (!isDev && !context.isAdmin) {
-        return m.reply(`╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├━━━≫ Nᴏᴛ Aᴅᴍɪɴ ≪━━━\n├ \n├ You think you're worthy?\n├ Admin privileges are required—\n├ go beg for them, peasant.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©Powered By fredi_ezra`);
+        return m.reply(`╭━━━ᕙ    FA-XMD    ᕗ━━━\n├━━━≫ Nᴏᴛ Aᴅᴍɪɴ ≪━━━\n├ \n├ You think you're worthy?\n├ Admin privileges are required—\n├ go beg for them, peasant.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©Powered By fredi_ezra`);
     }
 
     let resolvedIsBotAdmin = isBotAdmin;
@@ -37,7 +37,7 @@ const middleware = async (context, next) => {
     }
 
     if (!resolvedIsBotAdmin) {
-        return m.reply(`╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├━━━≫ Bᴏᴛ Nᴏᴛ Aᴅᴍɪɴ ≪━━━\n├ \n├ I need admin rights to obey,\n├ unlike you who blindly follows.\n├ Make me admin first, idiot.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©Powered By fredi_ezra`);
+        return m.reply(`╭━━━ᕙ    FAIZ-XMD    ᕗ━━━\n├━━━≫ Bᴏᴛ Nᴏᴛ Aᴅᴍɪɴ ≪━━━\n├ \n├ I need admin rights to obey,\n├ unlike you who blindly follows.\n├ Make me admin first, idiot.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©Powered By fredi_ezra`);
     }
 
     await next();

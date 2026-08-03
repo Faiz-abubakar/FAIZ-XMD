@@ -14,7 +14,7 @@ export default {
         const diceDisplay = rolls.map(r => ['⚀','⚁','⚂','⚃','⚄','⚅'][r-1]).join(' ');
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
         return client.sendMessage(m.chat, {
-            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Dɪᴄᴇ Rᴏʟʟ ≪━━━\n├\n├ 🎲 ${diceDisplay}\n├ 🔢 Rolls: [${rolls.join(', ')}]\n├ ➕ Total: ${total}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Dɪᴄᴇ Rᴏʟʟ ≪━━━\n├\n├ 🎲 ${diceDisplay}\n├ 🔢 Rolls: [${rolls.join(', ')}]\n├ ➕ Total: ${total}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
         }, { quoted: fq });
     }
 };

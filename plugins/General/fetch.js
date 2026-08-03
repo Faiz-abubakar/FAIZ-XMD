@@ -15,7 +15,7 @@ export default {
 
     if (!url) {
       return client.sendMessage(m.chat, {
-        text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH ≪━━━\n├ \n├ You forgot the URL, genius.\n├ Usage: ${prefix}fetch https://example.com\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+        text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH ≪━━━\n├ \n├ You forgot the URL, genius.\n├ Usage: ${prefix}fetch https://example.com\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
       }, { quoted: fq });
     }
 
@@ -56,7 +56,7 @@ export default {
           responseData.data = "[Data too large - sent as file]";
           
           await client.sendMessage(m.chat, {
-            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: JSON (too large, sent as file)\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: JSON (too large, sent as file)\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
           }, { quoted: fq });
 
           await client.sendMessage(m.chat, {
@@ -74,7 +74,7 @@ export default {
           }, { quoted: fq });
         } else {
           await client.sendMessage(m.chat, {
-            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: JSON\n├ \n${JSON.stringify(responseData, null, 2)}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: JSON\n├ \n${JSON.stringify(responseData, null, 2)}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
           }, { quoted: fq });
         }
 
@@ -85,7 +85,7 @@ export default {
         const title = titleMatch ? titleMatch[1] : 'No title found';
 
         await client.sendMessage(m.chat, {
-          text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: HTML\n├ Title: ${title}\n├ Length: ${html.length} chars\n├ Preview: ${html.replace(/<[^>]*>/g, '').substring(0, 200).trim()}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+          text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: HTML\n├ Title: ${title}\n├ Length: ${html.length} chars\n├ Preview: ${html.replace(/<[^>]*>/g, '').substring(0, 200).trim()}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
         }, { quoted: fq });
 
       } else if (contentType.includes('text/plain')) {
@@ -93,7 +93,7 @@ export default {
 
         if (text.length > 1500) {
           await client.sendMessage(m.chat, {
-            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: Plain Text (too large, sent as file)\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: Plain Text (too large, sent as file)\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
           }, { quoted: fq });
 
           await client.sendMessage(m.chat, {
@@ -103,7 +103,7 @@ export default {
           }, { quoted: fq });
         } else {
           await client.sendMessage(m.chat, {
-            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: Plain Text\n├ Content:\n├ ${text}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: Plain Text\n├ Content:\n├ ${text}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
           }, { quoted: fq });
         }
 
@@ -112,14 +112,14 @@ export default {
 
         await client.sendMessage(m.chat, {
           image: imageBuffer,
-          caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: Image\n├ Size: ${(imageBuffer.length / 1024).toFixed(2)} KB\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+          caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: Image\n├ Size: ${(imageBuffer.length / 1024).toFixed(2)} KB\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
         }, { quoted: fq });
 
       } else {
         const data = await response.text();
 
         await client.sendMessage(m.chat, {
-          text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: ${contentType}\n├ Length: ${data.length} chars\n├ Preview: ${data.length > 500 ? data.substring(0, 500) + "..." : data}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+          text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH RESULT ≪━━━\n├ \n├ URL: ${targetUrl}\n├ Status: ${response.status}\n├ Type: ${contentType}\n├ Length: ${data.length} chars\n├ Preview: ${data.length > 500 ? data.substring(0, 500) + "..." : data}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
         }, { quoted: fq });
       }
 
@@ -137,7 +137,7 @@ export default {
       }
 
       await client.sendMessage(m.chat, {
-        text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH FAILED ≪━━━\n├ \n├ ${errorMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+        text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FETCH FAILED ≪━━━\n├ \n├ ${errorMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
       }, { quoted: fq });
     }
   }

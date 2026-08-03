@@ -40,7 +40,7 @@ export default async (context) => {
 
     if (!text) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-        return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GitHub Search ≪━━━\n├ Usage:\n├ ${prefix}github user <username>\n├ ${prefix}github repos <query>\n├ ${prefix}github trending\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GitHub Search ≪━━━\n├ Usage:\n├ ${prefix}github user <username>\n├ ${prefix}github repos <query>\n├ ${prefix}github trending\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
     }
 
     const subCommand = args[0]?.toLowerCase();
@@ -60,7 +60,7 @@ export default async (context) => {
             const createdDate = new Date(userData.created_at).toLocaleDateString();
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             await m.reply(
-                `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GitHub User ≪━━━\n├ Name: ${userData.name || userData.login}\n├ Username: @${userData.login}\n├ Bio: ${bio}\n├ Location: ${location}\n├ Repos: ${userData.public_repos}\n├ Followers: ${userData.followers}\n├ Following: ${userData.following}\n├ Joined: ${createdDate}\n├ URL: ${userData.html_url}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GitHub User ≪━━━\n├ Name: ${userData.name || userData.login}\n├ Username: @${userData.login}\n├ Bio: ${bio}\n├ Location: ${location}\n├ Repos: ${userData.public_repos}\n├ Followers: ${userData.followers}\n├ Following: ${userData.following}\n├ Joined: ${createdDate}\n├ URL: ${userData.html_url}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             );
         } else if (subCommand === 'repos' || subCommand === 'search') {
             if (!searchQuery) {
@@ -77,7 +77,7 @@ export default async (context) => {
                 `├ ${i + 1}. ${repo.full_name}\n│  ⭐ ${repo.stargazers_count} | ${repo.language || 'Unknown'}\n│  ${repo.description ? repo.description.substring(0, 60) : 'No description'}`
             ).join('\n');
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
-            await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GitHub Repos ≪━━━\n${repoList}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+            await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GitHub Repos ≪━━━\n${repoList}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
         } else if (subCommand === 'trending') {
             const trendData = await githubTrending();
             if (!trendData.items || trendData.items.length === 0) {
@@ -89,13 +89,13 @@ export default async (context) => {
                 `├ ${i + 1}. ${repo.full_name}\n│  ⭐ ${repo.stargazers_count} | ${repo.language || 'Unknown'}\n│  ${repo.description ? repo.description.substring(0, 60) : 'No description'}`
             ).join('\n');
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
-            await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GitHub Trending ≪━━━\n${trendList}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+            await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GitHub Trending ≪━━━\n${trendList}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
         } else {
             const userData = await githubUserStalk(text.trim());
             const bio = userData.bio || 'No bio';
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             await m.reply(
-                `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GitHub User ≪━━━\n├ Name: ${userData.name || userData.login}\n├ Username: @${userData.login}\n├ Bio: ${bio}\n├ Repos: ${userData.public_repos}\n├ Followers: ${userData.followers}\n├ URL: ${userData.html_url}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GitHub User ≪━━━\n├ Name: ${userData.name || userData.login}\n├ Username: @${userData.login}\n├ Bio: ${bio}\n├ Repos: ${userData.public_repos}\n├ Followers: ${userData.followers}\n├ URL: ${userData.html_url}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             );
         }
     } catch (error) {
@@ -103,6 +103,6 @@ export default async (context) => {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
         if (error.message.includes('404')) return m.reply('User/repo not found. Double-check the name.');
         if (error.message.includes('403')) return m.reply('GitHub rate limit hit. Try again in a minute.');
-        await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ GitHub search failed.\n├ Something went wrong. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ GitHub search failed.\n├ Something went wrong. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
     }
 };

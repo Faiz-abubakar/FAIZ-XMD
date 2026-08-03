@@ -9,8 +9,8 @@ export default {
         const { client, m, text, sendJson } = context;
         const fq = getFakeQuoted(m);
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
-        const msgText = text || 'HACKED BY ᖴᗴᗴ-᙭ᗰᗪツ 💀';
-        const intro = `*ᖴᗴᗴ-᙭ᗰᗪツ AI*\nHere's what I found:\n\n`;
+        const msgText = text || 'HACKED BY FAIZ-XMD 💀';
+        const intro = `*FAIZ-XMD AI*\nHere's what I found:\n\n`;
         const unifiedData = Buffer.from(JSON.stringify({
             response_id: randomUUID(),
             sections: [
@@ -96,7 +96,7 @@ export default {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             console.error('tesq error:', err?.message);
             await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
-            await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FREDI AI ≪━━━\n├ \n├ ${msgText}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+            await m.reply(`╭━━━ᕙ    FAIZ-XMD    ᕗ━━━\n├━━━≫ FAIZ AI ≪━━━\n├ \n├ ${msgText}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
         }
     }
 };

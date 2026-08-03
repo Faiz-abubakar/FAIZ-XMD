@@ -9,7 +9,7 @@ export default async (context) => {
 
   if (!text) {
     return client.sendMessage(m.chat, {
-      text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Tell me a song name you dumbass!\n├ Example: .lyrics Alone ft ava max\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆'
+      text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Tell me a song name you dumbass!\n├ Example: .lyrics Alone ft ava max\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟'
     }, { quoted: fq });
   }
 
@@ -22,21 +22,21 @@ export default async (context) => {
 
     if (!data.status || !data.result || data.result.length === 0) {
       return client.sendMessage(m.chat, {
-        text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No lyrics found for "${text}". Maybe the song sucks.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+        text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No lyrics found for "${text}". Maybe the song sucks.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
       }, { quoted: fq });
     }
 
     const song = data.result[0];
     if (!song.plainLyrics) {
       return client.sendMessage(m.chat, {
-        text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No plain lyrics for this one. Try another song, loser.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆'
+        text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No plain lyrics for this one. Try another song, loser.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟'
       }, { quoted: fq });
     }
 
     const cleanLyrics = song.plainLyrics;
     const songTitle = song.trackName || song.name || 'Unknown';
     const artistName = song.artistName || 'Unknown Artist';
-    const bodyText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ LYRICS ≪━━━\n├ \n├ ${songTitle} - ${artistName}\n├ \n${cleanLyrics}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+    const bodyText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ LYRICS ≪━━━\n├ \n├ ${songTitle} - ${artistName}\n├ \n${cleanLyrics}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
     const copyCode = `${songTitle} - ${artistName}\n\n${cleanLyrics}`.slice(0, 4096);
 
     try {
@@ -69,7 +69,7 @@ export default async (context) => {
   } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
     await client.sendMessage(m.chat, {
-      text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ LYRICS ERROR ≪━━━\n├ \n├ Can't get lyrics for "${text}". Shit broke.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+      text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ LYRICS ERROR ≪━━━\n├ \n├ Can't get lyrics for "${text}". Shit broke.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
     }, { quoted: fq });
   }
 };

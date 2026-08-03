@@ -14,7 +14,7 @@ export default {
 
         if (!fullText && !m.quoted?.text) {
             return client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tʀᴀɴsʟᴀᴛᴇ ≪━━━\n├ \n├ Usage:\n├ ${prefix}tr ja Hello\n├ ${prefix}tr es How are you?\n├ Or reply to msg: ${prefix}tr en\n├ \n├ Codes: ja es fr de zh ar hi sw ko ru\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tʀᴀɴsʟᴀᴛᴇ ≪━━━\n├ \n├ Usage:\n├ ${prefix}tr ja Hello\n├ ${prefix}tr es How are you?\n├ Or reply to msg: ${prefix}tr en\n├ \n├ Codes: ja es fr de zh ar hi sw ko ru\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         }
 
@@ -39,7 +39,7 @@ export default {
             const result = await translate(text, { to: lang });
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             await client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tʀᴀɴsʟᴀᴛɪᴏɴ ≪━━━\n├ \n├ ${result.text}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tʀᴀɴsʟᴀᴛɪᴏɴ ≪━━━\n├ \n├ ${result.text}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         } catch (error) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
@@ -48,7 +48,7 @@ export default {
                 errorMessage = `Invalid language code "${lang}". Use: ja, es, fr, de, zh, ar, hi, ko, ru, etc.`;
             }
             return client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ ${errorMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ ${errorMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         }
     }

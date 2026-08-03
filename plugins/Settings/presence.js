@@ -12,7 +12,7 @@ export default async (context) => {
 
     const formatStylishReply = (message) => {
       return `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ ${message}\n╰━━━━━━━━━━━━━━━━ᕗ
-> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+> ©𝖋𝖆𝖎𝖟`;
     };
 
     try {

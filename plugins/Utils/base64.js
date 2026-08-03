@@ -21,13 +21,13 @@ export default {
 
         if (!input) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-            return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Bᴀsᴇ64 Eɴᴄᴏᴅᴇ ≪━━━\n├ \n├ You gave me nothing. Brilliant.\n├ Usage: .base64 Hello World\n├        .tobase64 [reply to text]\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+            return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Bᴀsᴇ64 Eɴᴄᴏᴅᴇ ≪━━━\n├ \n├ You gave me nothing. Brilliant.\n├ Usage: .base64 Hello World\n├        .tobase64 [reply to text]\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
         }
 
         const encoded = Buffer.from(input, 'utf8').toString('base64');
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
 
-        const resultText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Bᴀsᴇ64 Eɴᴄᴏᴅᴇ ≪━━━\n├ \n├ 📥 Input:\n├ ${input.slice(0, 80)}${input.length > 80 ? '...' : ''}\n├ \n├ 📤 Encoded:\n├ \n${encoded}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+        const resultText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Bᴀsᴇ64 Eɴᴄᴏᴅᴇ ≪━━━\n├ \n├ 📥 Input:\n├ ${input.slice(0, 80)}${input.length > 80 ? '...' : ''}\n├ \n├ 📤 Encoded:\n├ \n${encoded}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
         try {
             const msg = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({

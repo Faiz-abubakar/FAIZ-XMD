@@ -70,7 +70,7 @@ export default async (client, m) => {
         if (!imageMsg && !videoMsg) return;
         const senderNum = (m.sender || m.key?.participant || m.key?.remoteJid || '').split('@')[0].split(':')[0] || 'Unknown';
         const chatType = (m.chat || m.key?.remoteJid || '').endsWith('@g.us') ? 'Group' : 'DM';
-        const caption = `╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├━━━≫ VIEW ONCE RETRIEVED ≪━━━\n├ \n├ 👁 Sender: @${senderNum}\n├ 📍 Chat: ${chatType}\n├ \n├ You sneaky little thing. 😈\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+        const caption = `╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├━━━≫ VIEW ONCE RETRIEVED ≪━━━\n├ \n├ 👁 Sender: @${senderNum}\n├ 📍 Chat: ${chatType}\n├ \n├ You sneaky little thing. 😈\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
         const mentions = m.sender ? [m.sender] : [];
         if (imageMsg) {
             const buf = await downloadMedia(client, imageMsg, 'image');

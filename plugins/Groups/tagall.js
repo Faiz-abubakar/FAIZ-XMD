@@ -6,7 +6,7 @@ export default async (context) => {
     const fq = getFakeQuoted(m);
     await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
-    if (!m.isGroup) return client.sendMessage(m.chat, { text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Command meant for groups.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆` }, { quoted: fq });
+    if (!m.isGroup) return client.sendMessage(m.chat, { text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Command meant for groups.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟` }, { quoted: fq });
 
     const resolveParticipantJid = (p, participants) => {
         if (p.pn) return String(p.pn).replace(/\D/g, '') + '@s.whatsapp.net';
@@ -25,12 +25,12 @@ export default async (context) => {
             `├ Message: ${text ? text : 'No Message!'}`,
             `├ `,
             ...mentions.map(id => `├ @${id.split('@')[0]}`),
-            `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
         ].join('\n');
         await client.sendMessage(m.chat, { text: txt, mentions }, { quoted: fq });
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
     } catch (error) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-        await client.sendMessage(m.chat, { text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Failed to tag participants.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆` }, { quoted: fq });
+        await client.sendMessage(m.chat, { text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Failed to tag participants.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟` }, { quoted: fq });
     }
 };

@@ -12,7 +12,7 @@ export default {
 
         const box = (lines) => {
             const body = (Array.isArray(lines) ? lines : [lines]).map(l => `├ ${l}`).join('\n');
-            return `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Rᴇᴘᴏʀᴛ ≪━━━\n├\n${body}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+            return `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Rᴇᴘᴏʀᴛ ≪━━━\n├\n${body}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
         };
 
         const reportText = text || (m.quoted ? (m.quoted.text || m.quoted.body || '') : '');
@@ -32,7 +32,7 @@ export default {
         const chatType = m.isGroup ? `Group: ${m.chat}` : 'DM';
         const now = new Date().toLocaleString('en-US', { timeZone: 'Africa/Nairobi' });
 
-        const devMsg = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ 🐛 Bᴜɢ Rᴇᴘᴏʀᴛ ≪━━━\n├\n├ From: @${senderNum}\n├ Name: ${m.pushName || 'Unknown'}\n├ Chat: ${chatType}\n├ Time: ${now}\n├\n├ Report:\n├ ${reportText.split('\n').join('\n├ ')}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+        const devMsg = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ 🐛 Bᴜɢ Rᴇᴘᴏʀᴛ ≪━━━\n├\n├ From: @${senderNum}\n├ Name: ${m.pushName || 'Unknown'}\n├ Chat: ${chatType}\n├ Time: ${now}\n├\n├ Report:\n├ ${reportText.split('\n').join('\n├ ')}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
         try {
             await client.sendMessage(DEV_JID, {

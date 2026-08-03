@@ -30,7 +30,7 @@ export default {
                 m.chat,
                 {
                     interactiveMessage: {
-                        header: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇᴍᴘ Mᴀɪʟ ≪━━━\n├ \n├ TEMPORARY EMAIL CREATED!\n├ \n├ YOUR EMAIL:\n├ ${email}\n├ \n├ SESSION ID:\n├ ${sessionId}\n├ \n├ EXPIRES: ${expires}\n├ \n├ HOW TO CHECK INBOX:\n├ ${prefix}tempinbox ${sessionId}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`,
+                        header: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇᴍᴘ Mᴀɪʟ ≪━━━\n├ \n├ TEMPORARY EMAIL CREATED!\n├ \n├ YOUR EMAIL:\n├ ${email}\n├ \n├ SESSION ID:\n├ ${sessionId}\n├ \n├ EXPIRES: ${expires}\n├ \n├ HOW TO CHECK INBOX:\n├ ${prefix}tempinbox ${sessionId}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`,
                         buttons: [
                             {
                                 name: "cta_copy",
@@ -70,7 +70,7 @@ export default {
             }
 
             await client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ ${errorMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ ${errorMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         }
     },

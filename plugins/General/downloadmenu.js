@@ -39,7 +39,7 @@ export default {
     }
 
     menuText += `╰━━━━━━━━━━━━━━━━ᕗ\n`;
-    menuText += `> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+    menuText += `> ©𝖋𝖆𝖎𝖟`;
 
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
         await client.sendMessage(m.chat, { text: menuText }, { quoted: fq });

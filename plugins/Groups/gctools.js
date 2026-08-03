@@ -4,7 +4,7 @@ import middleware from '../../utils/botUtil/middleware.js';
 import { getDeviceMode } from '../../lib/deviceMode.js';
 
 const H = (title) => `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ${title} ≪━━━\n├`;
-const F = `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+const F = `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 const box = (title, lines) => `${H(title)}\n${lines.map(l => `├ ${l}`).join('\n')}\n├\n${F}`;
 
 async function sendSelectButtons(client, jid, fq, bodyText, title, rows) {

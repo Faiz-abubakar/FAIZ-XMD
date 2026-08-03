@@ -32,14 +32,14 @@ export default async (context) => {
     if (normalizeNumber(m.sender) !== DEVELOPER) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
         return await client.sendMessage(m.chat, {
-            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ACCESS DENIED ≪━━━\n├ \n├ This command is restricted to the bot owner.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ACCESS DENIED ≪━━━\n├ \n├ This command is restricted to the bot owner.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
         }, { quoted: fq });
     }
 
     if (!text) {
         const categoryList = CATEGORIES.map(c => `├ • ${c}`).join('\n');
         return await client.sendMessage(m.chat, {
-            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GETCMD ≪━━━\n├ \n├ Usage: ${prefix}getcmd <name>\n├ \n├ Categories:\n${categoryList}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ GETCMD ≪━━━\n├ \n├ Usage: ${prefix}getcmd <name>\n├ \n├ Categories:\n${categoryList}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
         }, { quoted: fq });
     }
 
@@ -55,7 +55,7 @@ export default async (context) => {
             const aliasNote = commandName !== rawInput ? `├ Alias: ${rawInput} → ${commandName}\n` : '';
 
             const responseId = Math.random().toString(36).substring(2);
-            const introText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ COMMAND FILE ≪━━━\n├ \n├ File: ${commandName}.js\n├ Category: ${category}\n├ Size: ${data.length} chars\n${aliasNote}├ \n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+            const introText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ COMMAND FILE ≪━━━\n├ \n├ File: ${commandName}.js\n├ Category: ${category}\n├ Size: ${data.length} chars\n${aliasNote}├ \n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
             
             const encodedData = Buffer.from(JSON.stringify({
                 "response_id": responseId,
@@ -147,7 +147,7 @@ export default async (context) => {
                 document: fileBuffer,
                 fileName: `${commandName}.js`,
                 mimetype: 'application/javascript',
-                caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 📄 ${commandName}.js\n├ Category: ${category}\n├ Size: ${data.length} chars\n${aliasNote}╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 📄 ${commandName}.js\n├ Category: ${category}\n├ Size: ${data.length} chars\n${aliasNote}╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
             
             fileFound = true;
@@ -156,7 +156,7 @@ export default async (context) => {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
             if (err.code !== 'ENOENT') {
                 return await client.sendMessage(m.chat, {
-                    text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ERROR ≪━━━\n├ \n├ Error reading file: ${err.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                    text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ERROR ≪━━━\n├ \n├ Error reading file: ${err.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
                 }, { quoted: fq });
             }
         }
@@ -164,7 +164,7 @@ export default async (context) => {
 
     if (!fileFound) {
         await client.sendMessage(m.chat, {
-            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ NOT FOUND ≪━━━\n├ \n├ "${rawInput}" not found in any category.\n├ \n├ Tip: use ${prefix}getcmd with no args\n├ to see all categories.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ NOT FOUND ≪━━━\n├ \n├ "${rawInput}" not found in any category.\n├ \n├ Tip: use ${prefix}getcmd with no args\n├ to see all categories.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
         }, { quoted: fq });
     }
 };

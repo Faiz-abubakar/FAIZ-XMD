@@ -18,7 +18,7 @@ export default async (context) => {
                 `├ \n` +
                 `├ There are no banned users at the moment.\n` +
                 `╰━━━━━━━━━━━━━━━━ᕗ\n` +
-                `> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                `> ©𝖋𝖆𝖎𝖟`
             );
         }
 
@@ -29,7 +29,7 @@ export default async (context) => {
             `├ \n` +
             `${list}\n` +
             `╰━━━━━━━━━━━━━━━━ᕗ\n` +
-            `> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            `> ©𝖋𝖆𝖎𝖟`
         );
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
     });

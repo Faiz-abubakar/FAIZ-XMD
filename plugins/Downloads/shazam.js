@@ -17,7 +17,7 @@ export default async (context) => {
 
         if (!m.quoted) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Quote an audio/video message, you deaf imbecile.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆");
+            return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Quote an audio/video message, you deaf imbecile.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟");
         }
 
         const p = m.quoted ? m.quoted : m;
@@ -26,7 +26,7 @@ export default async (context) => {
         const { status, metadata } = await acr.identify(buffer);
         if (status.code !== 0) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-            return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Song not recognized.\n├ Your audio is as indecipherable as your life choices.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆");
+            return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Song not recognized.\n├ Your audio is as indecipherable as your life choices.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟");
         }
 
         const { title, artists, album, genres, release_date } = metadata.music[0];
@@ -36,7 +36,7 @@ export default async (context) => {
         if (album) txt += `├ Album: ${album.name}\n`;
         if (genres) txt += `├ Genres: ${genres.map(v => v.name).join(', ')}\n`;
         if (release_date) txt += `├ Release: ${release_date}\n`;
-        txt += `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+        txt += `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
         await m.reply(txt);
@@ -44,6 +44,6 @@ export default async (context) => {
     } catch (error) {
         console.error('Music recognition error:', error);
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-        await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ SHAZAM ERROR ≪━━━\n├ \n├ Music recognition failed. Your audio is garbage.\n├ ${error.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ SHAZAM ERROR ≪━━━\n├ \n├ Music recognition failed. Your audio is garbage.\n├ ${error.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
     }
 };

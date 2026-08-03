@@ -6,7 +6,7 @@ export default async (context) => {
   await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
 
 
-  let cap = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≫ CARBON ≪━━━\n├ \n├ Converted By ${botname}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+  let cap = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≫ CARBON ≪━━━\n├ \n├ Converted By ${botname}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
   if (m.quoted && m.quoted.text) {
     const forq = m.quoted.text;
@@ -25,7 +25,7 @@ export default async (context) => {
 
       if (!response.ok) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-          return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≫ ERROR ≪━━━\n├ \n├ API failed to fetch a valid response.\n├ Try again later, genius.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆')
+          return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≫ ERROR ≪━━━\n├ \n├ API failed to fetch a valid response.\n├ Try again later, genius.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟')
       }
 
       let per = await response.buffer();
@@ -33,9 +33,9 @@ export default async (context) => {
       await client.sendMessage(m.chat, { image: per, caption: cap }, { quoted: fq });
     } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-      m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≫ ERROR ≪━━━\n├ \n├ An error occured, you broke it.\n├ ${error}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`)
+      m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≫ ERROR ≪━━━\n├ \n├ An error occured, you broke it.\n├ ${error}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`)
     }
   } else {
-    m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≫ CARBON ≪━━━\n├ \n├ Quote a code message, idiot.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+    m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≫ CARBON ≪━━━\n├ \n├ Quote a code message, idiot.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
   }
 }

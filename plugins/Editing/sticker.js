@@ -57,12 +57,12 @@ export default async (context) => {
 
                 if (!mediaMsg) {
                     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-                    return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ STICKER ≪━━━\n├ \n├ Where\'s the fvcking image or\n├ short video, idiot.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+                    return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ STICKER ≪━━━\n├ \n├ Where\'s the fvcking image or\n├ short video, idiot.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
                 }
 
                 if (mediaType === 'video' && mediaMsg.seconds > 30) {
                     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-                    return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ STICKER ≪━━━\n├ \n├ Videos must be 30 seconds or shorter.\n├ Learn to read, moron.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+                    return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ STICKER ≪━━━\n├ \n├ Videos must be 30 seconds or shorter.\n├ Learn to read, moron.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
                 }
 
                 const dlType = mediaType === 'sticker' ? 'sticker' : mediaType;
@@ -92,7 +92,7 @@ export default async (context) => {
             } catch (error) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
                 console.error(`Sticker error: ${error.message}`);
-                await m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ERROR ≪━━━\n├ \n├ Error while creating sticker.\n├ Try again, you failure.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+                await m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ERROR ≪━━━\n├ \n├ Error while creating sticker.\n├ Try again, you failure.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
             }
         }
     });

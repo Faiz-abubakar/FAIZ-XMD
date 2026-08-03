@@ -1,9 +1,9 @@
 import { uploadToUrl } from '../../lib/toUrl.js';
-  import { makeRC } from '../../lib/frediApi.js';
-  import { getFakeQuoted } from '../../lib/fakeQuoted.js';
-  import { getSettings } from '../../database/config.js';
+import { makeRC } from '../../lib/frediApi.js';
+import { getFakeQuoted } from '../../lib/fakeQuoted.js';
+import { getSettings } from '../../database/config.js';
 
-  export default {
+export default {
       name: 'rc',
       aliases: ['airc', 'rcedit'],
       description: 'AI image edit using RC model',
@@ -21,13 +21,13 @@ import { uploadToUrl } from '../../lib/toUrl.js';
 
           if (!quoted || !/image/.test(mime)) {
               return client.sendMessage(m.chat, {
-                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Reply to an image with a prompt.\n├ Example: ${prefix}rc make it look like night\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Reply to an image with a prompt.\n├ Example: ${prefix}rc make it look like night\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
               }, { quoted: fq });
           }
 
           if (!prompt) {
               return client.sendMessage(m.chat, {
-                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Tell me what to do with the image.\n├ Example: ${prefix}rc make it look like night\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Tell me what to do with the image.\n├ Example: ${prefix}rc make it look like night\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
               }, { quoted: fq });
           }
 
@@ -41,12 +41,12 @@ import { uploadToUrl } from '../../lib/toUrl.js';
               await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
               await client.sendMessage(m.chat, {
                   image: { url: resultUrl },
-                  caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ RC Eᴅɪᴛ ≪━━━\n├ \n├ Prompt: ${prompt}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                  caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ RC Eᴅɪᴛ ≪━━━\n├ \n├ Prompt: ${prompt}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
               }, { quoted: fq });
           } catch {
               await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
               await client.sendMessage(m.chat, {
-                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ RC edit failed. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ RC edit failed. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
               }, { quoted: fq });
           }
       }

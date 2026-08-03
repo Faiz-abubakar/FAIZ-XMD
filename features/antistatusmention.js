@@ -1,7 +1,7 @@
 import { getGroupSettings, addWarn, resetWarn, getWarnLimit } from '../database/config.js';
 import { resolveTargetJid } from '../lib/lidResolver.js';
 
-const fmt = (msg) => `╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├  ${msg}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+const fmt = (msg) => `╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├  ${msg}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
 const _num = (jid) => (jid || '').split('@')[0].split(':')[0].replace(/\D/g, '');
 

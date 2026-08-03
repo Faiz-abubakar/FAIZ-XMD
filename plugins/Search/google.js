@@ -1,5 +1,5 @@
 import { getFakeQuoted } from '../../lib/fakeQuoted.js';
-  import axios from 'axios';
+import axios from 'axios';
 export default async (context) => {
   const { client, m, text } = context;
   const fq = getFakeQuoted(m);
@@ -12,7 +12,7 @@ export default async (context) => {
       "╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n" +
       "│ 🚫 Please provide a search term!\n" +
       "├ Example: .google What is treason\n" +
-      "╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆"
+      "╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟"
     );
     return;
   }
@@ -28,7 +28,7 @@ export default async (context) => {
         "├ ERROR\n" +
         "╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n" +
         "│ ❌ Unable to find any results\n" +
-        "╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆"
+        "╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟"
       );
       return;
     }
@@ -55,7 +55,7 @@ export default async (context) => {
       "├ ERROR\n" +
       "╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n" +
       "│ ❌ An error occurred: " + e.message + "\n" +
-      "╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆"
+      "╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟"
     );
   }
 };

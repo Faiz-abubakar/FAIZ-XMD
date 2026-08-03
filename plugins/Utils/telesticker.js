@@ -12,7 +12,7 @@ export default async (context) => {
     try {
         if (!text) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇʟᴇɢʀᴀᴍ Sᴛɪᴄᴋᴇʀ ≪━━━\n├ \n├ Give me a Telegram sticker pack name or link!\n├ \n├ Example: ${prefix}ts itzel39\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+            return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇʟᴇɢʀᴀᴍ Sᴛɪᴄᴋᴇʀ ≪━━━\n├ \n├ Give me a Telegram sticker pack name or link!\n├ \n├ Example: ${prefix}ts itzel39\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
         }
 
         let packName = text.trim();
@@ -36,7 +36,7 @@ export default async (context) => {
 
         if (!data?.status || !data?.result?.sticker || data.result.sticker.length === 0) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇʟᴇɢʀᴀᴍ Sᴛɪᴄᴋᴇʀ ≪━━━\n├ \n├ That sticker pack doesn't exist or\n├ your internet is worse than your face.\n├ \n├ Pack: ${packName}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+            return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇʟᴇɢʀᴀᴍ Sᴛɪᴄᴋᴇʀ ≪━━━\n├ \n├ That sticker pack doesn't exist or\n├ your internet is worse than your face.\n├ \n├ Pack: ${packName}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
         }
 
         const stickers = data.result.sticker;
@@ -45,7 +45,7 @@ export default async (context) => {
         const stickerAuthor = author || '𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧';
 
         await client.sendMessage(m.chat, { react: { text: '🔃', key: m.reactKey } });
-        await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇʟᴇɢʀᴀᴍ Sᴛɪᴄᴋᴇʀ ≪━━━\n├ \n├ Pack: ${packTitle}\n├ Total: ${stickers.length} stickers\n├ Converting to WhatsApp stickers...\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇʟᴇɢʀᴀᴍ Sᴛɪᴄᴋᴇʀ ≪━━━\n├ \n├ Pack: ${packTitle}\n├ Total: ${stickers.length} stickers\n├ Converting to WhatsApp stickers...\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
 
         let sentCount = 0;
         let failedCount = 0;
@@ -92,7 +92,7 @@ export default async (context) => {
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
 
         const extraNote = tgsSkipped > 0 ? `\n├ Skipped ${tgsSkipped} .tgs (Lottie, unsupported)` : '';
-        await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇʟᴇɢʀᴀᴍ Sᴛɪᴄᴋᴇʀ ≪━━━\n├ \n├ Success: ${sentCount} stickers\n├ Failed: ${failedCount} stickers${extraNote}\n├ Pack: ${packTitle}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Tᴇʟᴇɢʀᴀᴍ Sᴛɪᴄᴋᴇʀ ≪━━━\n├ \n├ Success: ${sentCount} stickers\n├ Failed: ${failedCount} stickers${extraNote}\n├ Pack: ${packTitle}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
 
     } catch (error) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});

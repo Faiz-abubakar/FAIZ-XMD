@@ -103,7 +103,7 @@ export default {
       menuText += `╰━━━━━━━━━━━━━━━━ᕗ\n\n`;
     }
 
-    menuText += `> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+    menuText += `> ©𝖋𝖆𝖎𝖟`;
 
     await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
     await client.sendMessage(m.chat, {
@@ -134,7 +134,7 @@ export default {
               title: s.title,
               rows: s.rows.map(r => ({ title: r.title, description: r.description, rowId: r.id }))
             })),
-            footer: '©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆',
+            footer: '©𝖋𝖆𝖎𝖟',
           },
         }, { quoted: fq });
       } catch {}
@@ -146,7 +146,7 @@ export default {
       const interactiveMsg = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
         interactiveMessage: {
           body: { text: 'Browse Categories' },
-          footer: { text: '©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆' },
+          footer: { text: '©𝖋𝖆𝖎𝖟' },
           header: { hasMediaAttachment: false },
           nativeFlowMessage: {
             messageVersion: 1,

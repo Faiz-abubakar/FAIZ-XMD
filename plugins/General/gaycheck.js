@@ -35,21 +35,21 @@ export default {
         console.error(`Invalid target user: ${JSON.stringify(targetUser)}`);
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-        return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Who the fuck am I torching?\n├ Tag someone or I'll roast your\n├ sorry ass to ashes!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Who the fuck am I torching?\n├ Tag someone or I'll roast your\n├ sorry ass to ashes!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
       }
 
       targetNumber = targetUser.split('@')[0];
       if (!targetNumber) {
         console.error(`Failed to extract target number from JID: ${targetUser}`);
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-        return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ This user's ID is fucked beyond\n├ repair. Try again, you brainless twit!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ This user's ID is fucked beyond\n├ repair. Try again, you brainless twit!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
       }
 
     
       const checkingMsg = await client.sendMessage(
         m.chat,
         {
-          text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Sᴄᴀɴɴɪɴɢ ≪━━━\n├ \n├ Cracking open @${targetNumber}'s soul\n├ for gay vibes...\n├ This is gonna hurt like hell,\n├ you weakling!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`,
+          text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Sᴄᴀɴɴɪɴɢ ≪━━━\n├ \n├ Cracking open @${targetNumber}'s soul\n├ for gay vibes...\n├ This is gonna hurt like hell,\n├ you weakling!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`,
           mentions: [targetUser],
         },
         { quoted: fq }
@@ -263,7 +263,7 @@ export default {
 ├ and scientific, you sensitive
 ├ snowflake! Cry about it!
 ╰━━━━━━━━━━━━━━━━ᕗ
-> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+> ©𝖋𝖆𝖎𝖟`;
 
       await client.sendMessage(
         m.chat,
@@ -287,7 +287,7 @@ export default {
     } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
       console.error(`Gaycheck command detonated: ${error.stack}`);
-      await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Cʀᴀsʜᴇᴅ ≪━━━\n├ \n├ This shit blew up harder than your\n├ ego! Can't check gay levels now,\n├ you doomed idiot!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+      await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Cʀᴀsʜᴇᴅ ≪━━━\n├ \n├ This shit blew up harder than your\n├ ego! Can't check gay levels now,\n├ you doomed idiot!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
     }
   },
 };

@@ -7,13 +7,13 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
       return m ? m[1] : null;
   }
 
-  export default async (context) => {
+export default async (context) => {
       const { client, m, text } = context;
       const fq = getFakeQuoted(m);
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
       if (!text) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-          return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Supports: YouTube, TikTok, Instagram, Twitter/X, Facebook\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+          return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Supports: YouTube, TikTok, Instagram, Twitter/X, Facebook\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
       }
       const url = text.trim();
       await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -35,7 +35,7 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
               await client.sendMessage(m.chat, {
                   video: { url: d.result.url },
                   mimetype: 'video/mp4',
-                  caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 🎬 ${d.result.title || 'YouTube Video'}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                  caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 🎬 ${d.result.title || 'YouTube Video'}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
               }, { quoted: fq });
               return await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
 
@@ -45,7 +45,7 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
               if (!d.status || !d.result?.data) throw new Error('TikTok API failed');
               const dlRes = await fetch(d.result.data, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 40000 });
               sendBuf = Buffer.from(await dlRes.arrayBuffer());
-              caption = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 🎵 ${d.result.title || 'TikTok Video'}\n├ 👤 ${d.result.author?.nickname || ''}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+              caption = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 🎵 ${d.result.title || 'TikTok Video'}\n├ 👤 ${d.result.author?.nickname || ''}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
           } else if (isIG) {
               const r = await fetch(`${NEXRAY}/v2/instagram?url=${encodeURIComponent(url)}`, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 20000 });
@@ -55,7 +55,7 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
               const dlRes = await fetch(first.url, { headers: { 'User-Agent': 'Mozilla/5.0', 'Referer': 'https://www.instagram.com/' }, timeout: 35000 });
               sendBuf = Buffer.from(await dlRes.arrayBuffer());
               sendAsVideo = first.type === 'mp4';
-              caption = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 📷 ${d.result.title || 'Instagram Post'}\n├ 👤 @${d.result.username || ''}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+              caption = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 📷 ${d.result.title || 'Instagram Post'}\n├ 👤 @${d.result.username || ''}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
           } else if (isTW) {
               const r = await fetch(`${NEXRAY}/twitter?url=${encodeURIComponent(url)}`, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 20000 });
@@ -64,7 +64,7 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
               const best = d.result.download_url.find(u => u.type === 'mp4') || d.result.download_url[0];
               const dlRes = await fetch(best.url, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 40000 });
               sendBuf = Buffer.from(await dlRes.arrayBuffer());
-              caption = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 🐦 ${(d.result.title || 'X/Twitter Video').slice(0,80)}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+              caption = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 🐦 ${(d.result.title || 'X/Twitter Video').slice(0,80)}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
           } else if (isFB) {
               const r = await fetch(`${NEXRAY}/facebook?url=${encodeURIComponent(url)}`, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 20000 });
@@ -74,7 +74,7 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
               if (!videoUrl) throw new Error('No FB video URL');
               const dlRes = await fetch(videoUrl, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 40000 });
               sendBuf = Buffer.from(await dlRes.arrayBuffer());
-              caption = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 📘 ${d.result.title || 'Facebook Video'}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+              caption = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ 📘 ${d.result.title || 'Facebook Video'}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
           } else {
               throw new Error('Unsupported link. Use YouTube, TikTok, Instagram, Twitter/X, or Facebook.');
@@ -89,7 +89,7 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
           await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
       } catch (e) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-          m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Failed: ${e.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+          m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Failed: ${e.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
       }
   };
   

@@ -12,13 +12,13 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
       return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
   }
 
-  export default async (context) => {
+export default async (context) => {
       const { client, m, text, prefix, args } = context;
       const fq = getFakeQuoted(m);
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
       if (!text) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-          return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Example: ${prefix}ytmp4 https://youtu.be/xxxx [720/1080]\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+          return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Example: ${prefix}ytmp4 https://youtu.be/xxxx [720/1080]\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
       }
       const parts = text.trim().split(/\s+/);
       const urlPart = parts[0];
@@ -26,10 +26,10 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
       const id = extractYtId(urlPart);
       if (!id) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-          return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Invalid YouTube link.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+          return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Invalid YouTube link.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
       }
       await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
-      await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Processing ${quality}p... This may take up to 60s.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+      await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Processing ${quality}p... This may take up to 60s.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
       try {
           const fullUrl = `https://youtube.com/watch?v=${id}`;
           const apiUrl = NEXRAY_MP4 + encodeURIComponent(fullUrl) + `&resolusi=${quality}`;
@@ -40,12 +40,12 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
           await client.sendMessage(m.chat, {
               video: { url: videoUrl },
               mimetype: 'video/mp4',
-              caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ YouTube MP4 ≪━━━\n├ 🎬 ${title || 'Unknown'}\n├ ⏱ ${fmtDuration(duration)}\n├ 📺 Quality: ${quality}p\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+              caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ YouTube MP4 ≪━━━\n├ 🎬 ${title || 'Unknown'}\n├ ⏱ ${fmtDuration(duration)}\n├ 📺 Quality: ${quality}p\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
           }, { quoted: fq });
           await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
       } catch (e) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-          m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ YouTube MP4 download failed.\n├ Video might be age-restricted,\n├ unavailable, or too large.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+          m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ YouTube MP4 download failed.\n├ Video might be age-restricted,\n├ unavailable, or too large.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
       }
   };
   

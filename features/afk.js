@@ -10,7 +10,7 @@ export default async (client, m) => {
         afkMap.delete(senderNum);
         try {
             await client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├━━━≫ BACK ONLINE ≪━━━\n├ @${senderNum} finally crawled back.\n├ Was AFK for ${mins} min${mins !== 1 ? 's' : ''}.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`,
+                text: `╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├━━━≫ BACK ONLINE ≪━━━\n├ @${senderNum} finally crawled back.\n├ Was AFK for ${mins} min${mins !== 1 ? 's' : ''}.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`,
                 mentions: [m.sender]
             });
         } catch {}
@@ -27,7 +27,7 @@ export default async (client, m) => {
             const mins = Math.floor((Date.now() - time) / 60000);
             try {
                 await client.sendMessage(m.chat, {
-                    text: `╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├━━━≫ AFK ALERT ≪━━━\n├ @${num} is currently ghosting everyone.\n├ Reason: ${reason || 'none given 💀'}\n├ Since: ${mins} min${mins !== 1 ? 's' : ''} ago\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`,
+                    text: `╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├━━━≫ AFK ALERT ≪━━━\n├ @${num} is currently ghosting everyone.\n├ Reason: ${reason || 'none given 💀'}\n├ Since: ${mins} min${mins !== 1 ? 's' : ''} ago\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`,
                     mentions: [jid, m.sender]
                 });
             } catch {}

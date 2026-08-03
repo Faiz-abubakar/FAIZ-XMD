@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import { getFakeQuoted } from '../../lib/fakeQuoted.js';
   const NEXRAY = 'https://api.nexray.web.id/downloader/soundcloud?url=';
 
-  export default {
+export default {
       name: 'soundcloud',
       alias: ['scloud', 'scdl'],
       run: async (context) => {
@@ -11,9 +11,9 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
           if (!text) {
               await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-              return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Example: ${prefix}soundcloud https://soundcloud.com/user/track\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+              return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Example: ${prefix}soundcloud https://soundcloud.com/user/track\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
           }
-          if (!text.includes('soundcloud.com')) return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ That\'s not a SoundCloud link.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+          if (!text.includes('soundcloud.com')) return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ That\'s not a SoundCloud link.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
           await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
           try {
               const r = await fetch(NEXRAY + encodeURIComponent(text.trim()), { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 25000 });
@@ -34,7 +34,7 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
               }, { quoted: fq });
           } catch (e) {
               await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-              m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Failed: ${e.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+              m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Failed: ${e.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
           }
       }
   };

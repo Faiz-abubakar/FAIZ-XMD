@@ -24,21 +24,21 @@ export default async (context) => {
         if (!args || !args[0]) {
             if (foreignList.length === 0) {
                 await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
-                return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No foreigners detected. Group is clean, for now.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+                return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No foreigners detected. Group is clean, for now.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
             }
             let txt = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FOREIGNERS ≪━━━\n├ \n├ Country code not matching: ${mycode}\n├ Found ${foreignList.length} unwanted guests:\n├ \n`;
             for (const jid of foreignList) txt += `├ @${jid.split('@')[0]}\n`;
-            txt += `├ \n├ Send .foreigners -x to yeet them all\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+            txt += `├ \n├ Send .foreigners -x to yeet them all\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
             await client.sendMessage(m.chat, { text: txt, mentions: foreignList }, { quoted: m });
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
         } else if (args[0] === '-x') {
             await client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ PURGE MODE ≪━━━\n├ \n├ Removing all ${foreignList.length} foreigners now.\n├ Goodbye losers, you won't be missed.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ PURGE MODE ≪━━━\n├ \n├ Removing all ${foreignList.length} foreigners now.\n├ Goodbye losers, you won't be missed.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: m });
             setTimeout(async () => {
                 await client.groupParticipantsUpdate(m.chat, foreignList, 'remove');
                 setTimeout(() => {
-                    m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ All foreigners removed. Group cleansed.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+                    m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ All foreigners removed. Group cleansed.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
                 }, 1000);
             }, 1000);
         }

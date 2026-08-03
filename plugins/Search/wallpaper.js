@@ -9,7 +9,7 @@ export default async (context) => {
 
   if (!text) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-    return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ You forgot the query, dumbass.\n├ Try: .wallpaper anime girl, 5\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆");
+    return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ You forgot the query, dumbass.\n├ Try: .wallpaper anime girl, 5\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟");
   }
 
   let query, count;
@@ -31,7 +31,7 @@ export default async (context) => {
 
     if (results.length === 0) {
       await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-      return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No wallpapers found for "${query}". Your taste sucks.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+      return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No wallpapers found for "${query}". Your taste sucks.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
     }
 
     const toSend = results.slice(0, count);
@@ -43,7 +43,7 @@ export default async (context) => {
                       `├ Resolution: ${wp.resolution || 'Unknown'}\n` +
                       `├ Desc: ${wp.description || 'No description'}\n` +
                       `├ Link: ${wp.link || 'N/A'}\n` +
-                      `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+                      `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
       await client.sendMessage(m.chat, {
         image: { url: wp.image },
@@ -57,7 +57,7 @@ export default async (context) => {
   } catch (err) {
     console.error('Wallpaper error:', err);
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-    m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ WALLPAPER ERROR ≪━━━\n├ \n├ Failed to fetch wallpapers. Site's probably dead.\n├ ${err.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+    m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ WALLPAPER ERROR ≪━━━\n├ \n├ Failed to fetch wallpapers. Site's probably dead.\n├ ${err.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
   }
 };
 

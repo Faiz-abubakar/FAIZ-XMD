@@ -11,7 +11,7 @@ export default {
         const _isGroup = isGroup || m.isGroup || m.chat?.endsWith('@g.us');
         if (!_isGroup) {
             return client.sendMessage(m.chat, {
-                text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Oɴʟɪɴᴇ Lɪsᴛ ≪━━━\n├\n├ This only works in groups, genius.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆'
+                text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Oɴʟɪɴᴇ Lɪsᴛ ≪━━━\n├\n├ This only works in groups, genius.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟'
             }, { quoted: fq });
         }
         try {
@@ -54,12 +54,12 @@ export default {
                 ? onlineList.map((j, i) => `├ [${i + 1}] @${j.split('@')[0]}`).join('\n')
                 : '├ Nobody seems online right now.\n├ WhatsApp only reports presence for subscribed contacts.';
             return client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Oɴʟɪɴᴇ Mᴇᴍʙᴇʀs ≪━━━\n├\n${body}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`,
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Oɴʟɪɴᴇ Mᴇᴍʙᴇʀs ≪━━━\n├\n${body}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`,
                 mentions: onlineList
             }, { quoted: fq });
         } catch {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-            return client.sendMessage(m.chat, { text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Oɴʟɪɴᴇ Lɪsᴛ ≪━━━\n├\n├ Couldn\'t fetch online members.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆' }, { quoted: fq });
+            return client.sendMessage(m.chat, { text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Oɴʟɪɴᴇ Lɪsᴛ ≪━━━\n├\n├ Couldn\'t fetch online members.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟' }, { quoted: fq });
         }
     }
 };

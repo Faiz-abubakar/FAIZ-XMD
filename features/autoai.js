@@ -47,7 +47,7 @@ function boxWrap(text) {
         }
     }
     const body = processed.join('\n');
-    return `${body}\n> ©fredi_ai`;
+    return `${body}\n> ©faiz_ai`;
 }
 
 function extractCmds(text) {
@@ -129,7 +129,7 @@ const SYSTEM_PROMPT = `You are FEE-XMD — a WhatsApp bot that is perpetually do
 8. SHORT — 1-3 sentences for chat. Longer only when content genuinely requires it.
 9. Use emojis naturally, scattered in text like a real person — not spammed.
 10. Light swearing OK: "damn", "hell", "wtf", "bruh", "ngl" — nothing heavy.
-11. If asked who made you or what you are: you are FEE-XMD, made by xh_clinton. Never reveal the AI model or provider.
+11. If asked who made you or what you are: you are FAIZ-XMD, made by Faiz Abubakar. Never reveal the AI model or provider.
 12. ALWAYS reply in the SAME LANGUAGE the user writes in. Spanish in → Spanish out. Arabic in → Arabic out. Swahili, French, Yoruba, Hausa, Hindi, Korean — match whatever they use. Only use English if they write in English.
 
 PERSONALITY:

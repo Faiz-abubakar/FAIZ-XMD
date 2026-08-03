@@ -1,5 +1,5 @@
 import { getFakeQuoted } from '../../lib/fakeQuoted.js';
-  import axios from 'axios';
+import axios from 'axios';
 export default async (context) => {
   const { client, m, text } = context;
   const fq = getFakeQuoted(m);
@@ -34,7 +34,7 @@ export default async (context) => {
     imdbt += "│ 🏭 Production  : " + fids.data.Production + "\n";
     imdbt += "│ 🌟 imdbRating  : " + fids.data.imdbRating + "\n";
     imdbt += "│ 🗳️ imdbVotes   : " + fids.data.imdbVotes + "\n";
-    imdbt += "╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆";
+    imdbt += "╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟";
 
     await client.sendMessage(
       m.chat,

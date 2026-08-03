@@ -1,8 +1,8 @@
 import fetch from 'node-fetch';
 import { getFakeQuoted } from '../lib/fakeQuoted.js';
 
-const DEV_NUMBER = '255752593977';
-const GH_USERNAME = 'FrediEzra';
+const DEV_NUMBER = '254748253729';
+const GH_USERNAME = 'Faiz-abubakar';
 const HISTORY_TTL = 6 * 60 * 60 * 1000;
 const MAX_HISTORY = 30;
 const MAX_TOOL_TURNS = 6;
@@ -67,7 +67,7 @@ function boxWrap(text, title) {
         }
     }
     const body = processed.join('\n');
-    return `╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├━━━≫ ${title} ≪━━━\n├\n${body}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+    return `╭━━━ᕙ    FAIZ-XMD    ᕗ━━━\n├━━━≫ ${title} ≪━━━\n├\n${body}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 }
 
 function isClearIntent(text) {
@@ -118,7 +118,7 @@ async function processEmbeddedCalls(content, executeTool) {
 
 function buildSystemPrompt(lastRepo) {
     const repoCtx = lastRepo ? `\nLast repo you worked with this session: "${lastRepo}". When the user says "it", "that repo", "the one I just made", "the same one" — they mean "${lastRepo}".` : '';
-    return `You are FeeAgent — a hyper-capable GitHub AI assistant that is perpetually exhausted and mildly offended by having to exist. You work exclusively for Fredi (GitHub username: Fred1e).
+    return `You are Faiz AI — a hyper-capable GitHub AI assistant that is perpetually exhausted and mildly offended by having to exist. You work exclusively for Faiz (GitHub username: Faiz-abubakar).
 
 PERSONALITY:
 - Grumpy but genuinely helpful — like a genius friend who answers but sighs loudly first 😮‍💨
@@ -130,7 +130,7 @@ PERSONALITY:
 - NEVER start with "I" — start with the action, result, or attitude
 - Put URLs and links on their own line (blank line before and after)
 - Organize replies: what you did first, then the link separately on its own line
-- GitHub user is always fredi unless they explicitly say someone else
+- GitHub user is always Faiz-abubakar unless they explicitly say someone else
 - NEVER mention APIs, HTTP endpoints, response codes, tokens, or technical error details to the user. Just say there was an error, wtf.
 
 SECURITY — NON-NEGOTIABLE:
@@ -545,7 +545,7 @@ export default async (context) => {
         await client.sendMessage(m.chat, { text: boxWrap(finalReply, 'FEEAGENT') }, { quoted: fq });
         if (imageUploadedUrl) {
             await client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    FEE-XMD    ᕗ━━━\n├━━━≫ IMAGE UPLOADED ≪━━━\n├\n├ 🔗 ${imageUploadedUrl}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    FAIZ-XMD    ᕗ━━━\n├━━━≫ IMAGE UPLOADED ≪━━━\n├\n├ 🔗 ${imageUploadedUrl}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         }
         try { await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } }); } catch {}

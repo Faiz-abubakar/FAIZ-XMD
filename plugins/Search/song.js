@@ -1,5 +1,5 @@
 import { getFakeQuoted } from '../../lib/fakeQuoted.js';
-  import yts from 'yt-search';
+import yts from 'yt-search';
 export default async (context) => {
   const { client, m, text } = context;
   const fq = getFakeQuoted(m);
@@ -7,7 +7,7 @@ export default async (context) => {
 
   const formatStylishReply = (message) => {
     return `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ ${message}\n╰━━━━━━━━━━━━━━━━ᕗ
-> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+> ©𝖋𝖆𝖎𝖟`;
   };
 
   if (!text) {
@@ -44,7 +44,7 @@ export default async (context) => {
                   (thumbnail ? `│🖼 *Thumbnail*: ${thumbnail}\n` : '') +
                   `│🔗 *Video*: ${videoUrl}\n` +
                   `╰━━━━━━━━━━━━━━━━ᕗ
-> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆\n` +
+> ©𝖋𝖆𝖎𝖟\n` +
                   `🔥🔥`;
 
   await m.reply(formatStylishReply(response));

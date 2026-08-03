@@ -12,7 +12,7 @@ export default {
         const pkg = (text || '').trim();
         if (!pkg) {
             return client.sendMessage(m.chat, {
-                text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ NPM ≪━━━\n├\n├ Usage: .npm express\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆'
+                text: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ NPM ≪━━━\n├\n├ Usage: .npm express\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟'
             }, { quoted: fq });
         }
         try {
@@ -28,11 +28,11 @@ export default {
             const created = d.time?.created ? new Date(d.time.created).toLocaleDateString() : '?';
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             return client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ NPM: ${d.name} ≪━━━\n├\n├ 📦 Version: ${latest}\n├ 📝 Desc: ${desc}\n├ 👤 Author: ${author}\n├ 📄 License: ${license}\n├ 📅 Created: ${created}\n├ 🔗 ${homepage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ NPM: ${d.name} ≪━━━\n├\n├ 📦 Version: ${latest}\n├ 📝 Desc: ${desc}\n├ 👤 Author: ${author}\n├ 📄 License: ${license}\n├ 📅 Created: ${created}\n├ 🔗 ${homepage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         } catch {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-            return client.sendMessage(m.chat, { text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ NPM ≪━━━\n├\n├ Package "${pkg}" not found. Made it up?\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆` }, { quoted: fq });
+            return client.sendMessage(m.chat, { text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ NPM ≪━━━\n├\n├ Package "${pkg}" not found. Made it up?\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟` }, { quoted: fq });
         }
     }
 };

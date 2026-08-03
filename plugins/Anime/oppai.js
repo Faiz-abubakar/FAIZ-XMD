@@ -14,11 +14,11 @@ export default {
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
             await client.sendMessage(m.chat, {
                 image: { url },
-                caption: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Aɴɪᴍᴇ ≪━━━\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆'
+                caption: '╭━━━ᕙ    FAIZ-XMD    ᕗ━━━\n├━━━≫ Aɴɪᴍᴇ ≪━━━\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖆𝖎𝖟'
             }, { quoted: fq });
         } catch (error) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-            await m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Try again later!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝐏𝐨𝐰𝐞𝐫𝐞ᴅ 𝐁𝐲 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧');
+            await m.reply('╭━━━ᕙ    FAIZ-XMD    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Try again later!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝐏𝐨𝐰𝐞𝐫𝐞ᴅ 𝐁𝐲 Faiz Abubakar');
         }
     }
 };

@@ -1,8 +1,8 @@
 import { generateWAMessageFromContent, proto } from '@whiskeysockets/baileys';
-  import { uploadToUrl } from '../../lib/toUrl.js';
-  import { getFakeQuoted } from '../../lib/fakeQuoted.js';
+import { uploadToUrl } from '../../lib/toUrl.js';
+import { getFakeQuoted } from '../../lib/fakeQuoted.js';
 
-  export default async (context) => {
+export default async (context) => {
       const { client, m } = context;
       const fq = getFakeQuoted(m);
         await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -13,14 +13,14 @@ import { generateWAMessageFromContent, proto } from '@whiskeysockets/baileys';
 
           if (!mime) {
               await client.sendMessage(m.chat, { react: { text: '', key: m.reactKey } }).catch(() => {});
-              return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Quote or send a media file to upload.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆");
+              return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Quote or send a media file to upload.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟");
           }
 
           const mediaBuffer = await q.download();
 
           if (mediaBuffer.length > 256 * 1024 * 1024) {
               await client.sendMessage(m.chat, { react: { text: '', key: m.reactKey } }).catch(() => {});
-              return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ File too large! Max 256MB.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆");
+              return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ File too large! Max 256MB.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟");
           }
 
           await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -38,7 +38,7 @@ import { generateWAMessageFromContent, proto } from '@whiskeysockets/baileys';
               `├ 🔗 *Link:* ${link}\n` +
               `├ 📁 *Size:* ${fileSizeMB} MB\n` +
               `╰━━━━━━━━━━━━━━━━ᕗ\n` +
-              `> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+              `> ©𝖋𝖆𝖎𝖟`;
 
           try {
               const msg = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -64,6 +64,6 @@ import { generateWAMessageFromContent, proto } from '@whiskeysockets/baileys';
 
       } catch (err) {
           await client.sendMessage(m.chat, { react: { text: '', key: m.reactKey } });
-          m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Uᴘʟᴏᴀᴅ Eʀʀᴏʀ ≪━━━\n├ \n├ Upload failed, try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+          m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Uᴘʟᴏᴀᴅ Eʀʀᴏʀ ≪━━━\n├ \n├ Upload failed, try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
       }
   };

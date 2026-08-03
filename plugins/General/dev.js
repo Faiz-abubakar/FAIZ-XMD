@@ -13,8 +13,8 @@ export default {
 
     try {
       const devContact = {
-        phoneNumber: '255752593977',
-        fullName: 'fredi_ezra | Fredi Dev',
+        phoneNumber: '254748253729',
+        fullName: 'Faiz Abubakar | Faiz Dev',
         org: 'Fee-Xmd Bot'
       };
 
@@ -22,7 +22,7 @@ export default {
 
       await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
       await client.sendMessage(m.chat, {
-        text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Cᴏɴᴛᴀᴄᴛ Cᴀʀᴅ ≪━━━\n├ \n├ Developer: ${devContact.fullName}\n├ Don't spam the dev or you'll\n├ regret your existence.\n├ Contact card sent below.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+        text: `╭━━━ᕙ    FAIZ-XMD    ᕗ━━━\n├━━━≫ Cᴏɴᴛᴀᴄᴛ Cᴀʀᴅ ≪━━━\n├ \n├ Developer: ${devContact.fullName}\n├ Don't spam the dev or you'll\n├ regret your existence.\n├ Contact card sent below.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
       }, { quoted: fq });
 
       await client.sendMessage(m.chat, {
@@ -35,7 +35,7 @@ export default {
     } catch (error) {
     await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
       await client.sendMessage(m.chat, {
-        text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Fᴀɪʟᴇᴅ ≪━━━\n├ \n├ Couldn't send contact card.\n├ Error: ${error.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+        text: `╭━━━ᕙ    FAIZ-XMD    ᕗ━━━\n├━━━≫ Fᴀɪʟᴇᴅ ≪━━━\n├ \n├ Couldn't send contact card.\n├ Error: ${error.message}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
       }, { quoted: fq });
     }
   }

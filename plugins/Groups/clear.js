@@ -14,10 +14,10 @@ export default {
             try {
                 await client.clearChatMessages(m.chat, m);
                 await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
-                await m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≥ CLEARED ≤───\n├ \n├ Chat cleared from my view.\n├ Gone. All of it. 🧹\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+                await m.reply('╭━━━ᕙ    ᖴAIZ-᙭ᗰᗪツ    ᕗ━━━\n├───≥ CLEARED ≤───\n├ \n├ Chat cleared from my view.\n├ Gone. All of it. 🧹\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
             } catch (error) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-                await m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├───≥ ERROR ≤───\n├ \n├ Couldn\'t clear this chat.\n├ Try again, genius.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+                await m.reply('╭━━━ᕙ    ᖴAIZ-᙭ᗰᗪツ    ᕗ━━━\n├───≥ ERROR ≤───\n├ \n├ Couldn\'t clear this chat.\n├ Try again, genius.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
             }
         });
     }

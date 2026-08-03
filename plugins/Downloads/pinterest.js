@@ -14,7 +14,7 @@ export default {
       const query = (text || '').trim();
       if (!query) {
           await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-          return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Give me a search term, you visually impaired fool.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆");
+          return m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ Give me a search term, you visually impaired fool.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟");
       }
 
       await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
@@ -25,14 +25,14 @@ export default {
 
       if (!data.status || !data.result || data.result.length === 0) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-        return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No Pinterest images for "${query}".\n├ Your search is as pointless as you are.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No Pinterest images for "${query}".\n├ Your search is as pointless as you are.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
       }
 
       const images = data.result.filter(img => img !== null).slice(0, 5);
       
       if (images.length === 0) {
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-        return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No valid images found.\n├ Even Pinterest rejected your taste.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        return m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No valid images found.\n├ Even Pinterest rejected your taste.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
       }
 
       await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
@@ -44,7 +44,7 @@ export default {
           const buffer = Buffer.from(arrayBuffer);
 
           const caption = i === 0 
-            ? `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ PINTEREST ≪━━━\n├ \n├ Query: ${query}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            ? `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ PINTEREST ≪━━━\n├ \n├ Query: ${query}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             : `├ Image ${i+1} of ${images.length}`;
 
           await client.sendMessage(m.chat, {
@@ -62,7 +62,7 @@ export default {
     } catch (error) {
       console.error('Pinterest error:', error);
       await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
-      await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ PINTEREST ERROR ≪━━━\n├ \n├ Search failed. Your taste is probably trash anyway.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+      await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ PINTEREST ERROR ≪━━━\n├ \n├ Search failed. Your taste is probably trash anyway.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
     }
   }
 };

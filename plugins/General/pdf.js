@@ -1,8 +1,8 @@
 import { makePDF } from '../../lib/frediApi.js';
-  import { getFakeQuoted } from '../../lib/fakeQuoted.js';
-  import { getSettings } from '../../database/config.js';
+import { getFakeQuoted } from '../../lib/fakeQuoted.js';
+import { getSettings } from '../../database/config.js';
 
-  export default {
+export default {
       name: 'pdf',
       aliases: ['topdf', 'createpdf', 'makepdf'],
       description: 'Create a PDF from text',
@@ -18,7 +18,7 @@ import { makePDF } from '../../lib/frediApi.js';
 
           if (!query) {
               return client.sendMessage(m.chat, {
-                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Give me some text to convert.\n├ Example: ${prefix}pdf Hello world this is my document\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ Give me some text to convert.\n├ Example: ${prefix}pdf Hello world this is my document\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
               }, { quoted: fq });
           }
 
@@ -32,12 +32,12 @@ import { makePDF } from '../../lib/frediApi.js';
                   document: pdfBuf,
                   mimetype: 'application/pdf',
                   fileName: `document_${Date.now()}.pdf`,
-                  caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ PDF Cʀᴇᴀᴛᴇᴅ ≪━━━\n├ \n├ Here's your document.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                  caption: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ PDF Cʀᴇᴀᴛᴇᴅ ≪━━━\n├ \n├ Here's your document.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
               }, { quoted: fq });
           } catch {
               await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
               await client.sendMessage(m.chat, {
-                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ PDF creation failed. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                  text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ Eʀʀᴏʀ ≪━━━\n├ \n├ PDF creation failed. Try again.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
               }, { quoted: fq });
           }
       }

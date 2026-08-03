@@ -21,7 +21,7 @@ export default async (context) => {
         `├ Here's your precious link.\n` +
         `├ Copy it and stop bugging me.\n` +
         `╰━━━━━━━━━━━━━━━━ᕗ\n` +
-        `> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+        `> ©𝖋𝖆𝖎𝖟`;
 
       try {
         const msg = generateWAMessageFromContent(

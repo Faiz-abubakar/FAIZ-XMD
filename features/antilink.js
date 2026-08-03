@@ -15,7 +15,7 @@ const _pNum = (p) => {
 
 const isDevJid = (jid) => _num(jid) === DEV_NUMBER;
 
-const fmt = (msg) => `╭━━━ᕙ *Fee-Xmd Antilink* ᕗ━━━\n├ ${msg}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+const fmt = (msg) => `╭━━━ᕙ *Fee-Xmd Antilink* ᕗ━━━\n├ ${msg}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
 export default async (client, m) => {
     try {

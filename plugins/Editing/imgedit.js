@@ -1,9 +1,9 @@
 import { getSettings } from '../../database/config.js';
-  import { uploadToUrl } from '../../lib/toUrl.js';
-  import { makePhotoEdit } from '../../lib/frediApi.js';
-  import { getFakeQuoted } from '../../lib/fakeQuoted.js';
+import { uploadToUrl } from '../../lib/toUrl.js';
+import { makePhotoEdit } from '../../lib/frediApi.js';
+import { getFakeQuoted } from '../../lib/fakeQuoted.js';
 
-  export default {
+export default {
       name: 'imgedit',
       aliases: ['photoedit', 'aiedit'],
       description: 'AI photo editor',

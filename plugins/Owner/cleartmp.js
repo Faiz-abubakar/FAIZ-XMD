@@ -36,6 +36,6 @@ export default {
                 }
             }
         }
-        await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TMP CLEANED ≪━━━\n├ \n├ ✅ Deleted: ${deleted} file(s)\n├ ⏩ Skipped: ${skipped} item(s)\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+        await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TMP CLEANED ≪━━━\n├ \n├ ✅ Deleted: ${deleted} file(s)\n├ ⏩ Skipped: ${skipped} item(s)\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
     }
 };

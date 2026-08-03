@@ -29,7 +29,7 @@ export default {
         .join('');
     };
 
-    let menuText = `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ SETTINGS MENU ≪━━━\n├ \n├ Prefix: ${effectivePrefix || 'None'}\n├ \n`;
+    let menuText = `╭━━━ᕙ    FAIZ-XMD    ᕗ━━━\n├━━━≫ SETTINGS MENU ≪━━━\n├ \n├ Prefix: ${effectivePrefix || 'None'}\n├ \n`;
 
     let commandFiles = fs.readdirSync('./plugins/Settings').filter(file => file.endsWith('/js'));
     for (const file of commandFiles) {
@@ -46,8 +46,8 @@ export default {
       contextInfo: {
         externalAdReply: {
           showAdAttribution: false,
-          title: `Fredi WA bots`,
-          body: `©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`,
+          title: `FAIZ-XMD`,
+          body: `©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖆𝖎𝖟`,
           thumbnail: pict,
           sourceUrl: `https://github.com/Fred1e/Fee-XMD`,
           mediaType: 1,

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getFakeQuoted } from '../../lib/fakeQuoted.js';
-  import { uploadTempUrl } from '../../lib/toUrl.js';
-  export default {
+import { uploadTempUrl } from '../../lib/toUrl.js';
+export default {
     name: 'tomp4',
     aliases: ['tovideo', 'stickertomp4', 'sticker2video'],
     description: 'Converts stickers to MP4 videos',
@@ -12,16 +12,16 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
             await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
             if (!m.quoted) {
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TO VIDEO ≪━━━\n├ \n├ The command requires a STICKER.\n├ Your empty reply suggests you\n├ cannot read.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+                return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TO VIDEO ≪━━━\n├ \n├ The command requires a STICKER.\n├ Your empty reply suggests you\n├ cannot read.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
             }
             const quotedMime = m.quoted.mimetype || '';
-            if (!/webp/.test(quotedMime)) return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TO VIDEO ≪━━━\n├ \n├ That is a file, not a sticker.\n├ The .webp extension is a clue\n├ you seem to have missed.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
-            const statusMsg = await m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TO VIDEO ≪━━━\n├ \n├ Forcing your static sticker into\n├ a video. A pointless endeavor.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+            if (!/webp/.test(quotedMime)) return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TO VIDEO ≪━━━\n├ \n├ That is a file, not a sticker.\n├ The .webp extension is a clue\n├ you seem to have missed.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
+            const statusMsg = await m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TO VIDEO ≪━━━\n├ \n├ Forcing your static sticker into\n├ a video. A pointless endeavor.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
             const stickerBuffer = await m.quoted.download();
             if (!stickerBuffer) {
                 await client.sendMessage(m.chat, { delete: statusMsg.key }, { quoted: fq });
                 await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-                return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FAILED ≪━━━\n├ \n├ Failed to download. Your sticker is\n├ as inaccessible as common sense.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆');
+                return m.reply('╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FAILED ≪━━━\n├ \n├ Failed to download. Your sticker is\n├ as inaccessible as common sense.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟');
             }
             const stickerUrl = await uploadTempUrl(stickerBuffer, 'webp');
             const encodedUrl = encodeURIComponent(stickerUrl);
@@ -33,8 +33,8 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
             const videoBuffer = Buffer.from(videoResponse.data);
             await client.sendMessage(m.chat, { delete: statusMsg.key }, { quoted: fq });
             await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
-            await client.sendMessage(m.chat, { video: videoBuffer, caption: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TO VIDEO ≪━━━\n├ \n├ Behold, your motionless "video".\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆' }, { quoted: fq });
-            await client.sendMessage(m.chat, { document: videoBuffer, mimetype: 'video/mp4', fileName: `sticker_${Date.now()}.mp4`, caption: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ MP4 FILE ≪━━━\n├ \n├ Document version. Marginally\n├ more useful.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆' }, { quoted: fq });
+            await client.sendMessage(m.chat, { video: videoBuffer, caption: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ TO VIDEO ≪━━━\n├ \n├ Behold, your motionless "video".\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟' }, { quoted: fq });
+            await client.sendMessage(m.chat, { document: videoBuffer, mimetype: 'video/mp4', fileName: `sticker_${Date.now()}.mp4`, caption: '╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ MP4 FILE ≪━━━\n├ \n├ Document version. Marginally\n├ more useful.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟' }, { quoted: fq });
         } catch (err) {
             console.error('ToMP4 error:', err);
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
@@ -43,7 +43,7 @@ import { getFakeQuoted } from '../../lib/fakeQuoted.js';
             if (err.message.includes('Network Error')) userMessage = 'A network error. Are you connected to the void?';
             if (err.message.includes('upload') || err.message.includes('Upload')) userMessage = "Upload failed on all services. Try again later.";
             if (err.message.includes('converter deemed')) userMessage = 'The conversion API refused to process this. Try a simpler sticker.';
-            await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FAILED ≪━━━\n├ \n├ ${userMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`);
+            await m.reply(`╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ FAILED ≪━━━\n├ \n├ ${userMessage}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`);
         }
     }
 };

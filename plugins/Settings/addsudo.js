@@ -21,21 +21,21 @@ export default async (context) => {
 
         if (!numberToAdd || !/^\d+$/.test(numberToAdd)) {
             return client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ADD SUDO ≪━━━\n├ \n├ Give me a valid number or quote a user, fool!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ADD SUDO ≪━━━\n├ \n├ Give me a valid number or quote a user, fool!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         }
 
         const sudoUsers = await getSudoUsers();
         if (sudoUsers.includes(numberToAdd)) {
             return client.sendMessage(m.chat, {
-                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ADD SUDO ≪━━━\n├ \n├ Already a sudo user, you clueless twit!\n├ ${numberToAdd} is already in the elite ranks.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+                text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ADD SUDO ≪━━━\n├ \n├ Already a sudo user, you clueless twit!\n├ ${numberToAdd} is already in the elite ranks.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
             }, { quoted: fq });
         }
 
         await addSudoUser(numberToAdd);
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });
         return client.sendMessage(m.chat, {
-            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ADD SUDO ≪━━━\n├ \n├ Bow down!\n├ ${numberToAdd} is now a Sudo King!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`
+            text: `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ADD SUDO ≪━━━\n├ \n├ Bow down!\n├ ${numberToAdd} is now a Sudo King!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`
         }, { quoted: fq });
     });
 };

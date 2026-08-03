@@ -12,7 +12,7 @@ export default async (context) => {
         if (!jid.endsWith('@g.us')) {
             await client.sendMessage(m.chat, { react: { text: '⌛', key: m.reactKey } });
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return await m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ This command is for groups only, you fool.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆");
+            return await m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ This command is for groups only, you fool.\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟");
         }
 
         await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } });
@@ -20,7 +20,7 @@ export default async (context) => {
 
         if (!groupSettings) {
             await client.sendMessage(m.chat, { react: { text: '❌', key: m.reactKey } }).catch(() => {});
-            return await m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No group settings found. Configure something first!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆");
+            return await m.reply("╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├ No group settings found. Configure something first!\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟");
         }
 
         const on = (v) => (v ? '✅ ON' : '❌ OFF');
@@ -35,7 +35,7 @@ export default async (context) => {
         response += `├ Antipromote: ${on(groupSettings.antipromote)}\n`;
         response += `├ Welcome: ${on(groupSettings.welcome)}\n`;
         response += `├ Goodbye: ${on(groupSettings.goodbye)}\n`;
-        response += `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+        response += `╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
 
         await m.reply(response);
         await client.sendMessage(m.chat, { react: { text: '✅', key: m.reactKey } });

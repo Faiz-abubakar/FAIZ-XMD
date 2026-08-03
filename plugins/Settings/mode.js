@@ -30,7 +30,7 @@ export default {
 
             const fmt = (title, lines) => {
                 const body = (Array.isArray(lines) ? lines : [lines]).map(l => `├ ${l}`).join('\n');
-                return `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ${title} ≪━━━\n├\n${body}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆`;
+                return `╭━━━ᕙ    ᖴᗴᗴ-᙭ᗰᗪツ    ᕗ━━━\n├━━━≫ ${title} ≪━━━\n├\n${body}\n╰━━━━━━━━━━━━━━━━ᕗ\n> ©𝖋𝖆𝖎𝖟`;
             };
 
             const sendModeButtons = async (currentMode) => {
@@ -67,7 +67,7 @@ export default {
                     const interactiveMsg = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                         interactiveMessage: {
                             body: { text: bodyText },
-                            footer: { text: '©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆' },
+                            footer: { text: '©𝖋𝖆𝖎𝖟' },
                             header: { hasMediaAttachment: false },
                             nativeFlowMessage: {
                                 buttons: [
@@ -90,7 +90,7 @@ export default {
                             buttonText: 'Choose Mode',
                             listType: 1,
                             sections: sections.map(s => ({ title: s.title, rows: s.rows.map(r => ({ title: r.title, description: r.description, rowId: r.id })) })),
-                            footer: '©𝖕𝖔𝖜𝖊𝖗𝖊𝖉 𝖇𝖞 𝖋𝖗𝖊𝖉𝖎_𝖊𝖟𝖗𝖆',
+                            footer: '©𝖋𝖆𝖎𝖟',
                         },
                     }, { quoted: fq });
                 }
